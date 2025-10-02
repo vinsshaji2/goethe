@@ -57,7 +57,11 @@ email_accounts = [
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'mottyprecious930@gmail.com',
      'password': 'gvzn foeo tzrk nggi', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'afnanizar04@gmail.com',
-     'password': 'iwiz epbh teso ywta', 'to': to, 'subject': Subject}
+     'password': 'iwiz epbh teso ywta', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'angeljaisen2@gmail.com',
+     'password': 'avwo gzhf vmha hztl', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'aleenasibin37@gmail.com',
+     'password': 'nklt gpnu guht kthu', 'to': to, 'subject': Subject}
 ]
 
 # Example dynamic data
@@ -84,7 +88,10 @@ data_list = [
     ('Annamol Abrahammadam Thomas', 'Alappuzha', '9645747862', 'Lesen', 'annamolthomas05@gmail.com'),
     ('Hena Krishnan', 'Pathanamthitta', '9048927011', 'Lesen,Hören', 'omanagopan5@gmail.com'),
     ('Precious Motty', 'Ernakulam', '6282713033', 'Lesen', 'mottyprecious930@gmail.com'),
-    ('Afna Meloth Nizar', 'Ernakulam', '6282601642', 'Schreiben, Sprechen', 'afnanizar04@gmail.com')
+    ('Afna Meloth Nizar', 'Ernakulam', '6282601642', 'Schreiben, Sprechen', 'afnanizar04@gmail.com'),
+    ('Angel Jaisen', 'Kannur', '9207309904', 'Schreiben, Sprechen', 'angeljaisen2@gmail.com'),
+    ('Aleena Saji', 'Alappuzha', ': 9400278719', 'Sprechen', 'aleenasibin37@gmail.com')
+
 ]
 
 

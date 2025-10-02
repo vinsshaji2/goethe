@@ -57,7 +57,9 @@ email_accounts = [
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'abhinavabhishek795@gmail.com',
      'password': 'bjux iosx nkza qtrw', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'anandboss287@gmail.com',
-     'password': 'kqit dwis zhiq pwkj', 'to': to, 'subject': Subject}
+     'password': 'kqit dwis zhiq pwkj', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'manutomym@gmail.com',
+     'password': 'toss ojsh tjnk gkto', 'to': to, 'subject': Subject}
 ]
 
 # Example dynamic data
@@ -86,6 +88,7 @@ data_list = [
     ('Aswin Girish', 'Ernakulam', '7356748862', 'Lesen,Hören', 'aswingireesh0534@gmail.com'),
     ('Abhinav vinod', 'Alappuzha', '7592828793', 'Lesen,Hören', 'abhinavabhishek795@gmail.com'),
     ('Anand Boss', 'Idukki', '8086013918', 'lesen, Schreiben', 'anandboss287@gmail.com'),
+    ('Manu Tomy', 'Kannur', '9947322372', 'Sprechen', 'manutomym@gmail.com')
 ]
 
 
