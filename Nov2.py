@@ -10,31 +10,34 @@ to = 'exams.deutschzeit@gmail.com'
 Subject = "Testmail-1"
 
 email_accounts = [
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'karolinajijo9c@gmail.com', 'password': 'fqxf jhyx kfvf yvny', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'shanijoseph5197@gmail.com', 'password': 'otmu inwv qjci byuv', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sreelakshmivr06@gmail.com', 'password': 'mmxt zqlo uepy aojx', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sherin10414@gmail.com', 'password': 'fxjz cpgf ycpc hgda', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'johnniranjana2@gmail.com', 'password': 'mqzo gpix wqgk ccpf', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'snehasatheesh0839@gmail.com', 'password': 'nbcg bajt cghg ucbn', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'ihsankodali112@gmail.com', 'password': 'znss pdqb nrod jtax', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'paruzzz1230@gmail.com', 'password': 'iwmv drvn ahap csdp', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'niranjanbose54@gmail.com', 'password': 'qpfg wrai keuc ruwp', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'elmyjaison@gmail.com', 'password': 'jomb jqqi gsap hgyb', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'tjacobvaidian@gmail.com', 'password': 'rpmx ofwq ltip rkrh', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'bessy.ambili@gmail.com', 'password': 'mekc fppk ugul nvcy', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'samithaparasad1992@gmail.com', 'password': 'tkuv swge lytl uiif', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'anusreenew5431@gmail.com', 'password': 'cihk wulm vdvd phzg', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'namithajoji59@gmail.com', 'password': 'zmis ztlm jhbr oirs', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'milanbabukalady@gmail.com', 'password': 'twep rnbf nwwh jrnf', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sangeethasanthosh0186@gmail.com', 'password': 'ciqr lkjw wkhl omao', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'rr8522782@gmail.com', 'password': 'dplk cbua worg hkn', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sindhuaparna2005@gmail.com', 'password': 'qtwg sovw lyfw foyj', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'aswingireesh0534@gmail.com', 'password': 'fzck qhvg ugeb fqit', 'to': to, 'subject': Subject},
-{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'abhinavabhishek795@gmail.com', 'password': 'bjux iosx nkza qtrw', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'devanandarajesh27@gmail.com', 'password': 'ymic gmwo qhab nbzo', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'karolinajijo9c@gmail.com', 'password': 'fqxf jhyx kfvf yvny', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'shanijoseph5197@gmail.com', 'password': 'otmu inwv qjci byuv', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sreelakshmivr06@gmail.com', 'password': 'mmxt zqlo uepy aojx', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sherin10414@gmail.com', 'password': 'fxjz cpgf ycpc hgda', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'johnniranjana2@gmail.com', 'password': 'mqzo gpix wqgk ccpf', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'snehasatheesh0839@gmail.com', 'password': 'nbcg bajt cghg ucbn', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'ihsankodali112@gmail.com', 'password': 'znss pdqb nrod jtax', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'paruzzz1230@gmail.com', 'password': 'iwmv drvn ahap csdp', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'niranjanbose54@gmail.com', 'password': 'qpfg wrai keuc ruwp', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'elmyjaison@gmail.com', 'password': 'jomb jqqi gsap hgyb', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'tjacobvaidian@gmail.com', 'password': 'rpmx ofwq ltip rkrh', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'bessy.ambili@gmail.com', 'password': 'mekc fppk ugul nvcy', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'samithaparasad1992@gmail.com', 'password': 'tkuv swge lytl uiif', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'anusreenew5431@gmail.com', 'password': 'cihk wulm vdvd phzg', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'namithajoji59@gmail.com', 'password': 'zmis ztlm jhbr oirs', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'milanbabukalady@gmail.com', 'password': 'twep rnbf nwwh jrnf', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sangeethasanthosh0186@gmail.com', 'password': 'ciqr lkjw wkhl omao', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'rr8522782@gmail.com', 'password': 'dplk cbua worg hkn', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sindhuaparna2005@gmail.com', 'password': 'qtwg sovw lyfw foyj', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'aswingireesh0534@gmail.com', 'password': 'fzck qhvg ugeb fqit', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'abhinavabhishek795@gmail.com', 'password': 'bjux iosx nkza qtrw', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'anandboss287@gmail.com', 'password': 'kqit dwis zhiq pwkj', 'to': to, 'subject': Subject}
 ]
 
 # Example dynamic data
 data_list = [
+    ('Devananda Rajesh', 'Wayanad', '7902970175', 'sprechen', 'devanandarajesh27@gmail.com'),
     ('Karolina Jijo', 'Ernakulam', '8943690446', 'Sprechen', 'karolinajijo9c@gmail.com'),
     ('Shani joseph', 'Trivandrum', '7909103191', 'Sprechen', 'shanijoseph5197@gmail.com'),
     ('Sreelakshmi Vengamattathil Rajesh', 'Idukki', '6282578993', 'Sprechen', 'sreelakshmivr06@gmail.com'),
@@ -56,7 +59,7 @@ data_list = [
     ('Aparna Suresh', 'Kottayam', '9074904899', 'Hören', 'sindhuaparna2005@gmail.com'),
     ('Aswin Girish', 'Ernakulam', '7356748862', 'Lesen,Hören', 'aswingireesh0534@gmail.com'),
     ('Abhinav vinod', 'Alappuzha', '7592828793', 'Lesen,Hören', 'abhinavabhishek795@gmail.com'),
-
+    ('Anand Boss', 'Idukki', '8086013918', 'lesen, Schreiben', 'anandboss287@gmail.com'),
 ]
 
 def generate_email_body(full_name, current_district, contact_number, exam_modules, email_id):
