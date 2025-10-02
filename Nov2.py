@@ -9,7 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 to = 'exams.deutschzeit@gmail.com'
 # to = 'EXAMS.REGISTRATION@GOETHE-ZENTRUM.ORG'
 # Subject = "NOVEMBER 2025 EXAM REGISTRATION-GOETHE-ZENTRUM"
-Subject = "Testmail-1"
+Subject = "Testmail"
 
 email_accounts = [
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'devanandarajesh27@gmail.com',
@@ -48,7 +48,7 @@ email_accounts = [
      'password': 'twep rnbf nwwh jrnf', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sangeethasanthosh0186@gmail.com',
      'password': 'ciqr lkjw wkhl omao', 'to': to, 'subject': Subject},
-    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'rr8522782@gmail.com', 'password': 'dplk cbua worg hkn',
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'rr8522782@gmail.com', 'password': 'dplk cbua worg hknf',
      'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sindhuaparna2005@gmail.com',
      'password': 'qtwg sovw lyfw foyj', 'to': to, 'subject': Subject},
@@ -81,7 +81,7 @@ data_list = [
     ('Namitha Joji', 'Alappuzha', '8137823611', 'Hören,Schreiben', 'namithajoji59@gmail.com'),
     ('Milan Babu', 'Ernakulam', '9048955367', 'Schreiben', 'milanbabukalady@gmail.com'),
     ('Sangeetha Santhosh', 'Kottayam', '8139807205', 'Schreiben', 'sangeethasanthosh0186@gmail.com'),
-    ('Remya Ranga', 'Kollam', '8547925342', 'Lesen', 'rr8522782@gmail.com'),
+    ('Remya Ranga', 'Kollam', '8547925342', 'Schreiben', 'rr8522782@gmail.com'),
     ('Aparna Suresh', 'Kottayam', '9074904899', 'Hören', 'sindhuaparna2005@gmail.com'),
     ('Aswin Girish', 'Ernakulam', '7356748862', 'Lesen,Hören', 'aswingireesh0534@gmail.com'),
     ('Abhinav vinod', 'Alappuzha', '7592828793', 'Lesen,Hören', 'abhinavabhishek795@gmail.com'),
@@ -149,7 +149,7 @@ def send_all_emails():
 
 
 if __name__ == "__main__":
-    schedule_time = "23:53:00"
+    schedule_time = "19:28:20"
     print(f"⏰ Scheduled to send emails at {schedule_time} every day to {to}.")
 
     while True:
@@ -158,7 +158,7 @@ if __name__ == "__main__":
             success = send_all_emails()
             if not success:
                 print("⚠️ Some emails failed. Retrying in 10 seconds...")
-                time.sleep(10)
+                time.sleep(5)
                 send_all_emails()  # retry failed ones
             time.sleep(1)
         time.sleep(0.5)
