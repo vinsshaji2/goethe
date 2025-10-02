@@ -7,6 +7,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Email account details
 to = 'exams.deutschzeit@gmail.com'
+# to = 'EXAMS.REGISTRATION@GOETHE-ZENTRUM.ORG'
+# Subject = "NOVEMBER 2025 EXAM REGISTRATION-GOETHE-ZENTRUM"
 Subject = "Testmail-1"
 
 email_accounts = [
