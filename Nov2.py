@@ -66,7 +66,7 @@ email_accounts = [
 
 # Example dynamic data
 data_list = [
-    ('Akshaya Edathottiyil Santhosh', 'Kannur', '', 'Sprechen', 'akshayaes132006@gmail.com'),
+    ('Akshaya Edathottiyil Santhosh', 'Kannur', '9778435573', 'Sprechen', 'akshayaes132006@gmail.com'),
     ('Devananda Rajesh', 'Wayanad', '7902970175', 'sprechen', 'devanandarajesh27@gmail.com'),
     ('Karolina Jijo', 'Ernakulam', '8943690446', 'Sprechen', 'karolinajijo9c@gmail.com'),
     ('Shani joseph', 'Trivandrum', '7909103191', 'Sprechen', 'shanijoseph5197@gmail.com'),
