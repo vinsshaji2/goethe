@@ -12,6 +12,7 @@ to = 'exams.deutschzeit@gmail.com'
 Subject = "Testmail"
 
 email_accounts = [
+{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'akshayaes132006@gmail.com', 'password': 'kzxy fclm boaq csnn',  'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'devanandarajesh27@gmail.com',
      'password': 'ymic gmwo qhab nbzo', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'karolinajijo9c@gmail.com',
@@ -59,17 +60,19 @@ email_accounts = [
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'anandboss287@gmail.com',
      'password': 'kqit dwis zhiq pwkj', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'manutomym@gmail.com',
-     'password': 'toss ojsh tjnk gkto', 'to': to, 'subject': Subject}
+     'password': 'toss ojsh tjnk gkto', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'amiyajose21@gmail.com', 'password': 'ynvk gyyt acio hhbs', 'to': to, 'subject': Subject}
 ]
 
 # Example dynamic data
 data_list = [
+    ('Akshaya Edathottiyil Santhosh', 'Kannur', '', 'Sprechen', 'akshayaes132006@gmail.com'),
     ('Devananda Rajesh', 'Wayanad', '7902970175', 'sprechen', 'devanandarajesh27@gmail.com'),
     ('Karolina Jijo', 'Ernakulam', '8943690446', 'Sprechen', 'karolinajijo9c@gmail.com'),
     ('Shani joseph', 'Trivandrum', '7909103191', 'Sprechen', 'shanijoseph5197@gmail.com'),
     ('Sreelakshmi Vengamattathil Rajesh', 'Idukki', '6282578993', 'Sprechen', 'sreelakshmivr06@gmail.com'),
     ('Sherine Mathew', 'Kasaragod', '9947175672', 'Sprechen', 'sherin10414@gmail.com'),
-    ('Niranjana John Christ', 'Idukki', '9497651820', 'Sprechen', 'johnniranjana2@gmail.com'),
+    ('Niranjana John Christy', 'Idukki', '9497651820', 'Sprechen', 'johnniranjana2@gmail.com'),
     ('Sneha Satheesh', 'Idukki', '8075248308', 'Sprechen', 'snehasatheesh0839@gmail.com'),
     ('Ihsan kodali', 'Malapuram', '9633278218', 'Sprechen', 'ihsankodali112@gmail.com'),
     ('Ettiyedath madathil Ajikumar Gowrinanda', 'Ernakulam', '9847715466', 'Schreiben,Sprechen',
@@ -88,7 +91,8 @@ data_list = [
     ('Aswin Girish', 'Ernakulam', '7356748862', 'Lesen,Hören', 'aswingireesh0534@gmail.com'),
     ('Abhinav vinod', 'Alappuzha', '7592828793', 'Lesen,Hören', 'abhinavabhishek795@gmail.com'),
     ('Anand Boss', 'Idukki', '8086013918', 'lesen, Schreiben', 'anandboss287@gmail.com'),
-    ('Manu Tomy', 'Kannur', '9947322372', 'Sprechen', 'manutomym@gmail.com')
+    ('Manu Tomy', 'Kannur', '9947322372', 'Sprechen', 'manutomym@gmail.com'),
+    ('Amiya Jose', 'Kannur', '8301016065', 'sprechen', 'amiyajose21@gmail.com')
 ]
 
 
@@ -152,7 +156,7 @@ def send_all_emails():
 
 
 if __name__ == "__main__":
-    schedule_time = "19:28:20"
+    schedule_time = "08:05:00"
     print(f"⏰ Scheduled to send emails at {schedule_time} every day to {to}.")
 
     while True:
