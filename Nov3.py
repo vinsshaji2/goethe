@@ -63,7 +63,9 @@ email_accounts = [
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'aleenasibin37@gmail.com',
      'password': 'nklt gpnu guht kthu', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'joshuabiju52@gmail.com', 'password': 'mgzp zmct jbos oaeh', 'to': to, 'subject': Subject},
-    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'anjanasiva15@gmail.com', 'password': 'wjpn ynoe vfxs nsof', 'to': to, 'subject': Subject}
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'anjanasiva15@gmail.com', 'password': 'wjpn ynoe vfxs nsof', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'kirangeorge270503@gmail.com', 'password': 'rqyc hpsg faio cbir', 'to': to, 'subject': Subject},
+
 ]
 
 # Example dynamic data
@@ -94,7 +96,9 @@ data_list = [
     ('Angel Jaisen', 'Kannur', '9207309904', 'Schreiben, Sprechen', 'angeljaisen2@gmail.com'),
     ('Aleena Saji', 'Alappuzha', ': 9400278719', 'Sprechen', 'aleenasibin37@gmail.com'),
     ('Joshua Biju', 'Ernakulam', '9497028646', 'Schreiben', 'joshuabiju52@gmail.com'),
-('Anjana Sivakumar', 'Palakkad', '8089106626', 'Schreiben', 'anjanasiva15@gmail.com')
+    ('Anjana Sivakumar', 'Palakkad', '8089106626', 'Schreiben', 'anjanasiva15@gmail.com'),
+    ('Kiran George', 'Thrissur', '7736533677', 'Hören', 'kirangeorge270503@gmail.com'),
+
 
 ]
 
@@ -159,7 +163,7 @@ def send_all_emails():
 
 
 if __name__ == "__main__":
-    schedule_time = "08:05:00"
+    schedule_time = "08:52:50"
     print(f"⏰ Scheduled to send emails at {schedule_time} every day to {to}.")
 
     while True:

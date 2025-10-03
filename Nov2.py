@@ -156,7 +156,7 @@ def send_all_emails():
 
 
 if __name__ == "__main__":
-    schedule_time = "08:05:00"
+    schedule_time = "08:52:00"
     print(f"⏰ Scheduled to send emails at {schedule_time} every day to {to}.")
 
     while True:

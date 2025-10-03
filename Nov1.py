@@ -60,6 +60,10 @@ email_accounts = [
      'password': 'wlof dxej fnjp oiyn', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'raniyanasrin21@gmail.com',
      'password': 'wgrv nqit ozzr eapj', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'fathimariyas909@gmail.com', 'password': 'wmgh ouui lbel wsvv',
+     'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'jencyjaison15@gmail.com',
+     'password': 'fprb jicd exzo musf', 'to': to, 'subject': Subject}
 
 ]
 
@@ -90,6 +94,9 @@ data_list = [
     ('Aidan Ronal Aradan', 'Kollam', '9746167264', 'Lesen,Hören', 'aidanaradan@gmail.com'),
     ('Jinumon Sajimon', 'Kollam', '9961200369', 'Hören', 'jinumonsajimon0@gmail.com'),
     ('Raniya Nasrin Puthuvalparambu Raheem', 'Ernakulam', '8943356160', 'Hören', 'raniyanasrin21@gmail.com'),
+    ('Fathima Riyas', 'Kollam', '7994276442', 'Hören', 'fathimariyas909@gmail.com'),
+    ('Jency Jacob', 'Alappuzha', '9747497593', 'Schreiben, Sprechen', 'jencyjaison15@gmail.com')
+
 ]
 
 
@@ -153,7 +160,7 @@ def send_all_emails():
 
 
 if __name__ == "__main__":
-    schedule_time = "08:05:00"
+    schedule_time = "08:54:40"
     print(f"⏰ Scheduled to send emails at {schedule_time} every day to {to}.")
 
     while True:
