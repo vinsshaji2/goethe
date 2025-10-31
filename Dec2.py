@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # Email account details
 to = 'exams.deutschzeit@gmail.com'
 # to = 'EXAMS.REGISTRATION@GOETHE-ZENTRUM.ORG'
-# Subject = "NOVEMBER 2025 EXAM REGISTRATION-GOETHE-ZENTRUM"
+# Subject = "DECEMBER 2025 B2 EXAM REGISTRATION-GOETHE-ZENTRUM"
 Subject = "Testmail"
 
 email_accounts = [
@@ -45,7 +45,7 @@ data_list = [
     ('Aswathi Manoj', 'idukki', '7559924532', 'Sprechen', 'aswathimp003@gmail.com'),
     ('Ancy Xavier', 'Ernakulam', '9747065301', 'Sprechen', 'xavierancy95@gmail.com'),
     ('Jesnamol Joy', 'idukki', '9562458819', 'Sprechen', 'jesnamoljoy2002@gmail.com'),
-    ('Ardra Meenakumary Suseelan Pillai', 'Kollam', '9995224065', 'Sprechen', 'zardra958@gmail.com'),
+    ('Ardra M   eenakumary Suseelan Pillai', 'Kollam', '9995224065', 'Sprechen', 'zardra958@gmail.com'),
     ('Melbin Rose Babu', 'Thrissur', '7356115325', 'Schreiben,Sprechen', 'melbinrose1@gmail.com'),
     ('Ettiyedath Madathil Ajikumar Gowrinanda', 'Ernakulam', '9847715466', 'Schreiben,Sprechen', 'paruzzz1230@gmail.com'),
     ('Aswin Vattakuzhiyil Anil', 'Ernakulam', '9074146309', 'Lesen, Schreiben, Sprechen', 'vaaswin735@gmail.com'),
