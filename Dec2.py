@@ -51,7 +51,7 @@ data_list = [
     ('Aswin Vattakuzhiyil Anil', 'Ernakulam', '9074146309', 'Lesen, Schreiben, Sprechen', 'vaaswin735@gmail.com'),
     ('Staniya Thomas', 'Idukki', '8547503947', 'Lesen, Schreiben, Sprechen', 'staniyathomas43@gmail.com'),
     ('Noble Kalambal Baisy Joseph', 'Thrissur', '8714509388', 'Lesen,Schreiben,Sprechen', 'noblebaisy12@gmail.com'),
-    ('Sanjid Panachikkathaodi', 'Malapuram', '9778758990', 'Lesen,Hören,Sprechen', 'sanjushazz55@gmail.com'),
+    ('Sanjid Panachikkathodi', 'Malappuram', '9778758990', 'Lesen,Hören,Sprechen', 'sanjushazz55@gmail.com'),
     ('Suryanath Thundiyath', 'Malapuram', '8921555137', 'Hören Schreiben', 'suryanaththundiyath@gmail.com'),
     ('Milan Babu', 'Ernakulam', '9048955367', 'Schreiben', 'milanbabukalady@gmail.com'),
     ('Akhil Manikuttan', 'Kottayam', '8921552110', 'Schreiben', 'akhilmanikuttanparathanam2021@gmail.com'),
@@ -121,7 +121,7 @@ def send_all_emails():
 
 
 if __name__ == "__main__":
-    schedule_time = "21:10:30"
+    schedule_time = "08:16:30"
     print(f"⏰ Scheduled to send emails at {schedule_time} every day to {to}.")
 
     while True:

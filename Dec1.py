@@ -12,6 +12,7 @@ to = 'exams.deutschzeit@gmail.com'
 Subject = "Testmail"
 
 email_accounts = [
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'teenabenny982@gmail.com', 'password': 'gpcf tzro cvdn jvqs', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'snehamariya935@gmail.com', 'password': 'codq vzmc dish bpts', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'rosmipj1998@gmail.com', 'password': 'rkpu ualy sztt vhqc', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'thomasamareena@gmail.com', 'password': 'wnvu xmpn hhzs gofa', 'to': to, 'subject': Subject},
@@ -38,6 +39,7 @@ email_accounts = [
 
 # Example dynamic data
 data_list = [
+    ('Teena Benny', 'Kannur', '9188558710', 'sprechen', 'teenabenny982@gmail.com'),
     ('Sneha Mariya Tellus', 'Kollam', '7736053276', 'Sprechen', 'snehamariya935@gmail.com'),
     ('Rosmi Pulikkottil Jose', 'Thrissur', '7306035192', 'Sprechen', 'rosmipj1998@gmail.com'),
     ('Amareena Thomas', 'Ernakulam', '9037685991', 'Sprechen', 'thomasamareena@gmail.com'),
@@ -123,7 +125,7 @@ def send_all_emails():
 
 
 if __name__ == "__main__":
-    schedule_time = "21:13:20"
+    schedule_time = "08:15:20"
     print(f"⏰ Scheduled to send emails at {schedule_time} every day to {to}.")
 
     while True:
