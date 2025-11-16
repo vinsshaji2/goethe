@@ -385,7 +385,7 @@ class SimpleBrowserSession:
                         # Open GUI browser with saved state
                         await self.show_success_gui(p, storage_state, checkpoint_url)
                         # Handle cookie consent first
-                        await self.handle_cookie_consent(p)
+                        await self.handle_cookie_consent(page)
                         # else:
                         #     self.logger.error("❌ No modules available - Skipping GUI and stopping this session")
 
@@ -505,7 +505,7 @@ async def main():
     """Main entry point."""
 
     # Configuration
-    start_url = 'https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=0A0BC289D38FFC8ED8DA04902BCB5F062DD38A7CECC3A8B25BFF03A98290C3F98A98E89AD81E7A4ED9BDFED1558449D5E6FB8BC45FD602CEA228D5479B819FEE'
+    start_url = 'https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=590D9988DEDCAF83D7D805CA7CCE5C537DD2DF7DEBCDABE201F400AA81959DAED8C8EEC4DF422D47DAB8FD8452D11F80E6FB8BC15E8503CDF12B85429CDEC0E9'
     gui_display_seconds = 10000000000000  # Wait time after button click & GUI display time
 
     # Generate authenticated proxies
