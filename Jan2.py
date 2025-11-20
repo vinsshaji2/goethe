@@ -34,7 +34,7 @@ email_accounts = [
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sinukvarughese44@gmail.com', 'password': 'vaou vwqz yvdy emhu', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'ahmedyaseengoethe@gmail.com', 'password': 'vgbr cdcj nhrz kuan', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'saviobinu544@gmail.com', 'password': 'joxe dclh otcr nlny', 'to': to, 'subject': Subject},
-
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'Robmacoo369@gmail.com', 'password': 'jvrf tyfm wnvu xhkp', 'to': to, 'subject': Subject}
 
 
 ]
@@ -63,7 +63,7 @@ data_list = [
     ('Sinu Kaleeckal Varughese', 'Pathanamthitta', '9526336151', 'Lesen, Hören', 'sinukvarughese44@gmail.com'),
     ('Ahmed Yaseen', 'Malappuram', '7736256206', 'Schreiben, Sprechen', 'ahmedyaseengoethe@gmail.com'),
     ('Savio Binu', 'Wayanad', '80755 01844', 'Schreiben, Sprechen', 'saviobinu544@gmail.com'),
-
+    ('Aneetta George', 'Wayanad', '8075908663', 'schreiben', 'robmacoo369@gmail.com')
 
 ]
 
