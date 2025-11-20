@@ -33,6 +33,7 @@ email_accounts = [
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sheheemem70@gmail.com', 'password': 'akcy fkdb mqyh uxwu', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'nadiyamol853@gmail.com', 'password': 'dxqt xicg vqdc ggfw', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'aneenajoy742@gmail.com', 'password': 'kkrf rwyk cmpq qgbh', 'to': to, 'subject': Subject},
+{'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'Adeepcrozz@gmail.com', 'password': 'zwlt gidd atyr xmau', 'to': to, 'subject': Subject}
 ]
 
 # Example dynamic data
@@ -58,6 +59,7 @@ data_list = [
     ('Sheheem Erinjippurath Mohammed', 'Malappuram', '8590731904', 'Hören', 'sheheemem70@gmail.com'),
     ('Nadiya Sulthana Shukkoor', 'Ernakulam', '8111839003', 'Lesen, Schreiben', 'nadiyamol853@gmail.com'),
     ('Aneena Joy', 'Ernakulam', '7594834763', 'Schreiben Sprechen', 'aneenajoy742@gmail.com'),
+    ('Arjun Kokkarni', 'Wayanad', '8848216710', 'schreiben', 'Adeepcrozz@gmail.com')
 ]
 
 
