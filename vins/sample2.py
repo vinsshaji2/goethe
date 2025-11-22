@@ -19,7 +19,7 @@ logging.basicConfig(
 class SimpleBrowserSession:
     """Simple browser session that just opens a URL."""
 
-    def __init__(self, start_url: str, session_id: int, proxy: str = None, gui_display_seconds: int = 10):
+    def __init__(self, start_url: str, session_id: int, proxy: str = None, gui_display_seconds: int = 1000000000000000):
         """
         Initialize browser session.
 
@@ -227,19 +227,19 @@ class SimpleBrowserSession:
             }
 
             # Add proxy if provided
-            # if self.proxy:
-            #     if '@' in self.proxy:
-            #         auth_part, server_part = self.proxy.split('@')
-            #         username, password = auth_part.split(':')
-            #         context_options['proxy'] = {
-            #             'server': f'http://{server_part}',
-            #             'username': username,
-            #             'password': password
-            #         }
-            #     else:
-            #         context_options['proxy'] = {
-            #             'server': f'http://{self.proxy}'
-            #         }
+            if self.proxy:
+                if '@' in self.proxy:
+                    auth_part, server_part = self.proxy.split('@')
+                    username, password = auth_part.split(':')
+                    context_options['proxy'] = {
+                        'server': f'http://{server_part}',
+                        'username': username,
+                        'password': password
+                    }
+                else:
+                    context_options['proxy'] = {
+                        'server': f'http://{self.proxy}'
+                    }
 
             context_gui = await browser_gui.new_context(**context_options)
             page_gui = await context_gui.new_page()
@@ -311,19 +311,19 @@ class SimpleBrowserSession:
                 }
 
                 # Add proxy if provided (with authentication)
-                # if self.proxy:
-                #     if '@' in self.proxy:
-                #         auth_part, server_part = self.proxy.split('@')
-                #         username, password = auth_part.split(':')
-                #         context_options['proxy'] = {
-                #             'server': f'http://{server_part}',
-                #             'username': username,
-                #             'password': password
-                #         }
-                #     else:
-                #         # context_options['proxy'] = {
-                #         #                         #     'server': f'http://{self.proxy}'
-                #         # }
+                if self.proxy:
+                    if '@' in self.proxy:
+                        auth_part, server_part = self.proxy.split('@')
+                        username, password = auth_part.split(':')
+                        context_options['proxy'] = {
+                            'server': f'http://{server_part}',
+                            'username': username,
+                            'password': password
+                        }
+                    else:
+                        context_options['proxy'] = {
+                            'server': f'http://{self.proxy}'
+                        }
                 #         pass
                 context_headless = await browser_headless.new_context(**context_options)
                 page = await context_headless.new_page()
@@ -346,7 +346,6 @@ class SimpleBrowserSession:
                     attempt += 1
                     self.logger.info(f"🔍 Attempt {attempt}: Looking for 'Select modules' button...")
 
-
                     # await asyncio.sleep(1)
 
                     # Try to click 'Select modules' button
@@ -355,7 +354,7 @@ class SimpleBrowserSession:
 
                         # Wait 10 seconds after clicking
                         self.logger.info(f"⏳ Waiting {self.gui_display_seconds} seconds after button click...")
-                        await asyncio.sleep(.5)
+                        await asyncio.sleep(1)
 
                         # Check for errors FIRST
                         self.logger.info("🔍 Checking for errors...")
@@ -417,10 +416,12 @@ class SimpleBrowserSession:
                     # await browser_headless.close()
                     await asyncio.sleep(1000000000)
 
+
 class ParallelBrowserManager:
     """Manage multiple parallel browser sessions."""
 
-    def __init__(self, start_url: str, num_sessions: int, proxies: list = None, gui_display_seconds: int = 100000000000):
+    def __init__(self, start_url: str, num_sessions: int, proxies: list = None,
+                 gui_display_seconds: int = 100000000000):
         """
         Initialize manager.
 
@@ -506,11 +507,11 @@ async def main():
     """Main entry point."""
 
     # Configuration
-    start_url = 'https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=590D9988DEDCAF83D7D805CA7CCE5C537DD2DF7DEBCDABE201F400AA81959DAED8C8EEC4DF422D47DAB8FD8452D11F80E6FB8BC15E8503CDF12B85429CDEC0E9'
+    start_url ='https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=585B9CDED2DFA886DADB55977CCF51567DD58E74B9C4ABE70FF451FBD4C598FB89CBEE9E83147918DEBAF48503D01E87E7FA8FC45686059BF3788A4799869BE7'
     gui_display_seconds = 10000000000000  # Wait time after button click & GUI display time
 
     # Generate authenticated proxies
-    # proxies = generate_authenticated_proxies(num_proxies=100)
+    proxies = generate_authenticated_proxies(num_proxies=100)
 
     print("\n" + "=" * 80)
     print("PARALLEL BROWSER WITH SELECT MODULE AUTO-CLICKER")
@@ -545,7 +546,8 @@ async def main():
     print("\n" + "=" * 80 + "\n")
 
     # Create and run manager
-    manager = ParallelBrowserManager(start_url=start_url,num_sessions=n, proxies=None, gui_display_seconds=10000000000000)
+    manager = ParallelBrowserManager(start_url=start_url, num_sessions=n, proxies=proxies,
+                                     gui_display_seconds=10000000000000)
     await manager.run_all_parallel()
 
 
@@ -556,5 +558,3 @@ if __name__ == "__main__":
         print("\n\n⚠️  Closing all browsers...")
     except Exception as e:
         print(f"\n\n❌ Fatal error: {str(e)}")
-
-

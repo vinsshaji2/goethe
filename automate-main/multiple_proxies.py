@@ -52,7 +52,7 @@ class MultipleBrowserTest:
         """Generate fixed module selection: listening, writing, speaking (excluding reading)."""
         # Always use these three modules for all sessions
         # selected = ['listening', 'reading', 'writing', 'speaking']
-        selected = [ 'writing']
+        selected = ['reading']
         return selected
     
     async def handle_cookie_consent(self):
@@ -145,29 +145,30 @@ class MultipleBrowserTest:
     async def check_and_validate_checkboxes(self):
         """Check if at least one required module is available."""
         try:
-            await self.page.wait_for_selector('.cs-input__checkboxes-wrapper', timeout=15000)
-
-            # Get status for all modules
-            for module in ['reading', 'listening', 'writing', 'speaking']:
-                self.module_status[module] = await self.get_module_status(module)
-
-            available_modules = [
-                m for m, status in self.module_status.items()
-                if status.get('available', False)
-            ]
-            unavailable_modules = [
-                m for m, status in self.module_status.items()
-                if not status.get('available', False)
-            ]
-
-            if available_modules:
-                self.logger.info(f"✅ SUCCESS: Available modules: {', '.join(available_modules)}")
-                if unavailable_modules:
-                    self.logger.warning(f"⚠️ Unavailable modules: {', '.join(unavailable_modules)}")
-                return 'partial_success'
-            else:
-                self.logger.error("❌ No modules available at this time")
-                return 'checkbox_error'
+            pass
+            # await self.page.wait_for_selector('.cs-input__checkboxes-wrapper', timeout=15000)
+            #
+            # # Get status for all modules
+            # for module in ['reading', 'listening', 'writing', 'speaking']:
+            #     self.module_status[module] = await self.get_module_status(module)
+            #
+            # available_modules = [
+            #     m for m, status in self.module_status.items()
+            #     if status.get('available', False)
+            # ]
+            # unavailable_modules = [
+            #     m for m, status in self.module_status.items()
+            #     if not status.get('available', False)
+            # ]
+            #
+            # if available_modules:
+            #     self.logger.info(f"✅ SUCCESS: Available modules: {', '.join(available_modules)}")
+            #     if unavailable_modules:
+            #         self.logger.warning(f"⚠️ Unavailable modules: {', '.join(unavailable_modules)}")
+            #     return 'partial_success'
+            # else:
+            #     self.logger.error("❌ No modules available at this time")
+            #     return 'checkbox_error'
 
         except Exception as e:
             self.logger.error(f"Error checking checkboxes: {str(e)}")
@@ -255,7 +256,7 @@ class MultipleBrowserTest:
             await page_gui.add_init_script(stealth_script)
             
             # Navigate to the checkpoint URL with preserved session
-            await page_gui.goto(checkpoint_url, wait_until='domcontentloaded', timeout=30000)
+            await page_gui.goto(checkpoint_url, wait_until='domcontentloaded', timeout=300000)
             self.logger.info(f"✅ GUI browser opened at checkpoint with preserved session state")
             
             # Handle cookie consent if it appears
@@ -282,7 +283,7 @@ class MultipleBrowserTest:
                     continue
 
             # Sleep before the next action
-            await asyncio.sleep(display_seconds)
+            await asyncio.sleep(20000000000000000)
 
             # Step 3: Click continue button (after selecting modules)
             self.logger.info("Attempting to click 'Continue' button...")
@@ -594,7 +595,7 @@ class MultipleBrowserTest:
                 
                 # Navigate to URL
                 self.logger.info("Navigating to booking page...")
-                await self.page.goto(self.start_url, wait_until='domcontentloaded', timeout=30000)
+                await self.page.goto(self.start_url, wait_until='domcontentloaded', timeout=300000)
                 await asyncio.sleep(1)
                 
                 # Handle cookie consent first
@@ -620,7 +621,7 @@ class MultipleBrowserTest:
                 
                 if button_clicked:
                     self.logger.info("✅ 'Select modules' button clicked")
-                    await asyncio.sleep(2)
+                    await asyncio.sleep(1)
                 
                 # Check for errors AFTER clicking Select modules
                 self.logger.info("Checking for errors...")
@@ -643,7 +644,7 @@ class MultipleBrowserTest:
 
                 # if validation_result in ('success', 'partial_success'):
                 #     self.result = 'success'
-                #     await self.show_success_gui_at_checkpoint(context, p, display_seconds=self.gui_display_seconds)
+                await self.show_success_gui_at_checkpoint(context, p, display_seconds=self.gui_display_seconds)
                 # elif validation_result == 'checkbox_error':
                 #     self.result = 'checkbox_error'
                 # else:
@@ -740,113 +741,115 @@ class MultipleTestManager:
         await asyncio.gather(*tasks, return_exceptions=True)
         
         # Print statistics
-        self.print_statistics()
+        # self.print_statistics()
     
-    def print_statistics(self):
-        """Print comprehensive statistics."""
-        self.logger.info("\n" + "="*80)
-        self.logger.info("FINAL STATISTICS")
-        self.logger.info("="*80)
+    # def print_statistics(self):
+    #     """Print comprehensive statistics."""
+    #     self.logger.info("\n" + "="*80)
+    #     self.logger.info("FINAL STATISTICS")
+    #     self.logger.info("="*80)
+    #
+    #     # Count results
+    #     result_counts = {
+    #         'success': 0,
+    #         'high_demand_error': 0,
+    #         'bad_error': 0,
+    #         'checkbox_error': 0,
+    #         'exception': 0,
+    #         'unknown_error': 0
+    #     }
+    #
+    #     total_duration = 0
+    #     module_usage = {'reading': 0, 'listening': 0, 'writing': 0, 'speaking': 0}
+    #     module_availability = {
+    #         'reading': {'available': 0, 'unavailable': 0},
+    #         'listening': {'available': 0, 'unavailable': 0},
+    #         'writing': {'available': 0, 'unavailable': 0},
+    #         'speaking': {'available': 0, 'unavailable': 0}
+    #     }
+    #
+    #     # Process results
+    #     for session_id, data in sorted(self.results.items()):
+    #         result = data['result']
+    #         if result in result_counts:
+    #             result_counts[result] += 1
+    #
+    #         total_duration += data['duration']
+    #
+    #         # Count module usage
+    #         for module in data['required_modules']:
+    #             module_usage[module] += 1
+    #
+    #         # Count module availability
+    #         for module, status in data['module_status'].items():
+    #             if status.get('exists', False):
+    #                 if status.get('available', False):
+    #                     module_availability[module]['available'] += 1
+    #                 else:
+    #                     module_availability[module]['unavailable'] += 1
+    #
+    #     # Print session-by-session results
+    #     self.logger.info("\nSESSION-BY-SESSION RESULTS:")
+    #     self.logger.info("-" * 80)
+    #
+    #     for session_id, data in sorted(self.results.items()):
+    #         result_emoji = {
+    #             'success': '✅',
+    #             'high_demand_error': '❌',
+    #             'bad_error': '❌',
+    #             'checkbox_error': '❌',
+    #             'exception': '❌',
+    #             'unknown_error': '❌'
+    #         }
+    #
+    #         emoji = result_emoji.get(data['result'], '❓')
+    #         modules_str = ', '.join([m.upper() for m in data['required_modules']])
+    #
+    #         self.logger.info(f"Session {session_id:2d}: {emoji} {data['result']:20s} | "
+    #                        f"Modules: {modules_str:40s} | Duration: {data['duration']:6.2f}s")
         
-        # Count results
-        result_counts = {
-            'success': 0,
-            'high_demand_error': 0,
-            'bad_error': 0,
-            'checkbox_error': 0,
-            'exception': 0,
-            'unknown_error': 0
-        }
-        
-        total_duration = 0
-        module_usage = {'reading': 0, 'listening': 0, 'writing': 0, 'speaking': 0}
-        module_availability = {
-            'reading': {'available': 0, 'unavailable': 0},
-            'listening': {'available': 0, 'unavailable': 0},
-            'writing': {'available': 0, 'unavailable': 0},
-            'speaking': {'available': 0, 'unavailable': 0}
-        }
-        
-        # Process results
-        for session_id, data in sorted(self.results.items()):
-            result = data['result']
-            if result in result_counts:
-                result_counts[result] += 1
-            
-            total_duration += data['duration']
-            
-            # Count module usage
-            for module in data['required_modules']:
-                module_usage[module] += 1
-            
-            # Count module availability
-            for module, status in data['module_status'].items():
-                if status.get('exists', False):
-                    if status.get('available', False):
-                        module_availability[module]['available'] += 1
-                    else:
-                        module_availability[module]['unavailable'] += 1
-        
-        # Print session-by-session results
-        self.logger.info("\nSESSION-BY-SESSION RESULTS:")
-        self.logger.info("-" * 80)
-        
-        for session_id, data in sorted(self.results.items()):
-            result_emoji = {
-                'success': '✅',
-                'high_demand_error': '❌',
-                'bad_error': '❌',
-                'checkbox_error': '❌',
-                'exception': '❌',
-                'unknown_error': '❌'
-            }
-            
-            emoji = result_emoji.get(data['result'], '❓')
-            modules_str = ', '.join([m.upper() for m in data['required_modules']])
-            
-            self.logger.info(f"Session {session_id:2d}: {emoji} {data['result']:20s} | "
-                           f"Modules: {modules_str:40s} | Duration: {data['duration']:6.2f}s")
-        
-        # Print summary statistics
-        avg_duration = total_duration / self.num_sessions if self.num_sessions > 0 else 0
-        
-        self.logger.info("\n" + "-" * 80)
-        self.logger.info("RESULT SUMMARY:")
-        self.logger.info("-" * 80)
-        self.logger.info(f"✅ Success:               {result_counts['success']:3d} ({result_counts['success']/self.num_sessions*100:5.1f}%)")
-        self.logger.info(f"❌ High Demand Error:     {result_counts['high_demand_error']:3d} ({result_counts['high_demand_error']/self.num_sessions*100:5.1f}%)")
-        self.logger.info(f"❌ Bad Error:             {result_counts['bad_error']:3d} ({result_counts['bad_error']/self.num_sessions*100:5.1f}%)")
-        self.logger.info(f"❌ Checkbox Error:        {result_counts['checkbox_error']:3d} ({result_counts['checkbox_error']/self.num_sessions*100:5.1f}%)")
-        self.logger.info(f"❌ Exception:             {result_counts['exception']:3d} ({result_counts['exception']/self.num_sessions*100:5.1f}%)")
-        self.logger.info(f"❌ Unknown Error:         {result_counts['unknown_error']:3d} ({result_counts['unknown_error']/self.num_sessions*100:5.1f}%)")
-        self.logger.info(f"\nTotal Sessions:           {self.num_sessions}")
-        self.logger.info(f"Average Duration:         {avg_duration:.2f}s")
-        self.logger.info(f"Total Duration:           {total_duration:.2f}s")
-        
-        # Print module usage statistics
-        self.logger.info("\n" + "-" * 80)
-        self.logger.info("MODULE USAGE (How many times each module was required):")
-        self.logger.info("-" * 80)
-        for module in ['reading', 'listening', 'writing', 'speaking']:
-            percentage = (module_usage[module] / self.num_sessions * 100) if self.num_sessions > 0 else 0
-            self.logger.info(f"{module.upper():10s}: {module_usage[module]:3d} times ({percentage:5.1f}%)")
-        
-        # Print module availability statistics
-        self.logger.info("\n" + "-" * 80)
-        self.logger.info("MODULE AVAILABILITY (Across all sessions):")
-        self.logger.info("-" * 80)
-        for module in ['reading', 'listening', 'writing', 'speaking']:
-            available = module_availability[module]['available']
-            unavailable = module_availability[module]['unavailable']
-            total = available + unavailable
-            
-            if total > 0:
-                available_pct = (available / total * 100)
-                self.logger.info(f"{module.upper():10s}: Available {available:3d}/{total:3d} ({available_pct:5.1f}%)")
-            else:
-                self.logger.info(f"{module.upper():10s}: No data")
-        
-        self.logger.info("\n" + "="*80)
+        # # Print summary statistics
+        # avg_duration = total_duration / self.num_sessions if self.num_sessions > 0 else 0
+        # try:
+        #     self.logger.info("\n" + "-" * 80)
+        #     self.logger.info("RESULT SUMMARY:")
+        #     self.logger.info("-" * 80)
+        #     self.logger.info(f"✅ Success:               {result_counts['success']:3d} ({result_counts['success']/self.num_sessions*100:5.1f}%)")
+        #     self.logger.info(f"❌ High Demand Error:     {result_counts['high_demand_error']:3d} ({result_counts['high_demand_error']/self.num_sessions*100:5.1f}%)")
+        #     self.logger.info(f"❌ Bad Error:             {result_counts['bad_error']:3d} ({result_counts['bad_error']/self.num_sessions*100:5.1f}%)")
+        #     self.logger.info(f"❌ Checkbox Error:        {result_counts['checkbox_error']:3d} ({result_counts['checkbox_error']/self.num_sessions*100:5.1f}%)")
+        #     self.logger.info(f"❌ Exception:             {result_counts['exception']:3d} ({result_counts['exception']/self.num_sessions*100:5.1f}%)")
+        #     self.logger.info(f"❌ Unknown Error:         {result_counts['unknown_error']:3d} ({result_counts['unknown_error']/self.num_sessions*100:5.1f}%)")
+        #     self.logger.info(f"\nTotal Sessions:           {self.num_sessions}")
+        #     self.logger.info(f"Average Duration:         {avg_duration:.2f}s")
+        #     self.logger.info(f"Total Duration:           {total_duration:.2f}s")
+        #
+        #     # Print module usage statistics
+        #     self.logger.info("\n" + "-" * 80)
+        #     self.logger.info("MODULE USAGE (How many times each module was required):")
+        #     self.logger.info("-" * 80)
+        #     for module in ['reading', 'listening', 'writing', 'speaking']:
+        #         percentage = (module_usage[module] / self.num_sessions * 100) if self.num_sessions > 0 else 0
+        #         self.logger.info(f"{module.upper():10s}: {module_usage[module]:3d} times ({percentage:5.1f}%)")
+        #
+        #     # Print module availability statistics
+        #     self.logger.info("\n" + "-" * 80)
+        #     self.logger.info("MODULE AVAILABILITY (Across all sessions):")
+        #     self.logger.info("-" * 80)
+        #     for module in ['reading', 'listening', 'writing', 'speaking']:
+        #         available = module_availability[module]['available']
+        #         unavailable = module_availability[module]['unavailable']
+        #         total = available + unavailable
+        #
+        #         if total > 0:
+        #             available_pct = (available / total * 100)
+        #             self.logger.info(f"{module.upper():10s}: Available {available:3d}/{total:3d} ({available_pct:5.1f}%)")
+        #         else:
+        #             self.logger.info(f"{module.upper():10s}: No data")
+        #
+        #     self.logger.info("\n" + "="*80)
+        # except Exception as e:
+        #     print(e)
 
 
 # ============================================================================
@@ -863,9 +866,9 @@ def generate_authenticated_proxies(num_proxies: int = 1000):
     Returns:
         List of authenticated proxy URLs
     """
-    username = 'spw4p88v6c'
-    password = 'fDwWo7mIm04xKmh5~e'
-    proxy_host = 'dc.decodo.com'
+    username = 'spii5uqapq'
+    password = 'fwThVwm=4g8is04FeZ'
+    proxy_host = 'gate.decodo.com'
     
     # Generate proxies with different ports (starting from 10001)
     proxies = []
@@ -908,9 +911,9 @@ async def main():
     """Main entry point."""
     
     # Configuration
-    start_url = 'https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=0A0BC289D38FFC8ED8DA04902BCB5F062DD38A7CECC3A8B25BFF03A98290C3F98A98E89AD81E7A4ED9BDFED1558449D5E6FB8BC45FD602CEA228D5479B819FEE'
+    start_url = 'https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=0C009CD886DDA9D3DF895F917B9D58047C83DB7FEAC7ACB00EFE02AE84C39DF48DC8EDC8DD10784A8EE7AFD305D318D5E8AD87C35FD0039AA52F821E9C84CBBA'
     headless = False  # Always starts headless, shows GUI on success
-    gui_display_seconds = 200  # How many seconds to display GUI on success
+    gui_display_seconds = 200000000  # How many seconds to display GUI on success
     
     # Generate authenticated proxies and load accounts
     proxies = generate_authenticated_proxies(num_proxies=100)  # Generate 100 authenticated proxies
