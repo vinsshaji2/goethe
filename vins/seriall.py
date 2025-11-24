@@ -56,7 +56,7 @@ class MultipleBrowserTest:
                     if await button.count() > 0:
                         self.logger.info("Cookie consent dialog found, clicking Accept All")
                         await button.click(timeout=5000)
-                        await asyncio.sleep(1)
+                        await asyncio.sleep(.5)
                         return True
                 except Exception:
                     continue
@@ -92,7 +92,7 @@ class MultipleBrowserTest:
     async def check_url_has_options(self):
         """Check if current URL contains 'options' keyword."""
         current_url = self.page.url
-        has_options = 'options' in current_url.lower()
+        has_options = 'options' or 'coe' in current_url.lower()
         self.logger.info(f"Current URL: {current_url}")
         self.logger.info(f"URL contains 'options': {has_options}")
         return has_options
@@ -168,7 +168,6 @@ class MultipleBrowserTest:
                 "button[class*='accept']",
                 "//button[contains(text(), 'Accept')]"
             ]
-            await asyncio.sleep(1)
             for selector in cookie_accept_selectors:
                 try:
                     button = page_gui.locator(selector)
@@ -262,10 +261,10 @@ class MultipleBrowserTest:
 
                 self.logger.info("Navigating to booking page...")
                 await self.page.goto(self.start_url, wait_until='domcontentloaded', timeout=300000)
-                await asyncio.sleep(1)
+                await asyncio.sleep(.5)
 
                 await self.handle_cookie_consent()
-                await asyncio.sleep(1)
+                await asyncio.sleep(.5)
 
                 # Click "Select modules" button
                 self.logger.info("Clicking 'Select modules' button...")
@@ -286,7 +285,7 @@ class MultipleBrowserTest:
 
                 if button_clicked:
                     self.logger.info("✅ 'Select modules' button clicked")
-                    await asyncio.sleep(1)
+                    await asyncio.sleep(.5)
 
                 # Check for errors AFTER clicking Select modules
                 self.logger.info("Checking for errors...")
@@ -409,7 +408,7 @@ class SerialTestManager:
             # Small delay between attempts
             if attempt < self.max_attempts:
                 self.logger.info("⏳ Waiting 2 seconds before next attempt...")
-                await asyncio.sleep(2)
+                await asyncio.sleep(1)
 
         self.logger.info(f"\n{'=' * 60}")
         self.logger.info(f"❌ ALL {self.max_attempts} ATTEMPTS FAILED")
@@ -473,12 +472,13 @@ def load_accounts(accounts_file: str = "accounts.json"):
 
 
 async def main():
-    start_url = 'https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=580D9BDA8288A8858A8E06C37C9F0D5527D4DD78EFC5FEEA0CAC00A8D795C8FC8B9BEACE83112A47D5ECFCD507D34ED0EEFAD8C603D1539BA72BD61ECB83CEE6'
+    start_url = 'https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=5B0BCAD2D186FB86DF8E50C67D9F585628878E7EBB90FCEB0BFA07ACD4C298ADD8CBBF9E8F12284ED8BBA8D30EDE4383EBF2D89150D40298A57AD042CD869AE6'
     headless = False
     gui_display_seconds = 200000000
 
-    proxies = generate_authenticated_proxies(num_proxies=100)
+    # proxies = generate_authenticated_proxies(num_proxies=100)
     accounts = load_accounts("accounts.json")
+    proxies = []
 
     print("\n" + "=" * 80)
     print("SERIAL BROWSER TEST - ONE AT A TIME UNTIL SUCCESS")

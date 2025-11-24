@@ -1,0 +1,308 @@
+2025-11-24 01:01:12,076 - slot_watcher - INFO - Starting Slot Watcher
+2025-11-24 01:01:12,837 - slot_watcher - INFO - [Manager] Shared browser launched
+2025-11-24 01:01:12,838 - slot_watcher - INFO - [1] Starting attempt #1
+2025-11-24 01:01:12,838 - slot_watcher - INFO - [2] Starting attempt #1
+2025-11-24 01:01:12,838 - slot_watcher - INFO - [3] Starting attempt #1
+2025-11-24 01:01:12,839 - slot_watcher - INFO - [4] Starting attempt #1
+2025-11-24 01:01:12,839 - slot_watcher - INFO - [5] Starting attempt #1
+2025-11-24 01:01:12,839 - slot_watcher - INFO - [6] Starting attempt #1
+2025-11-24 01:01:12,841 - slot_watcher - INFO - [7] Starting attempt #1
+2025-11-24 01:01:12,841 - slot_watcher - INFO - [8] Starting attempt #1
+2025-11-24 01:01:15,282 - slot_watcher - INFO - [4] Cookie accepted using text=/accept/i
+2025-11-24 01:01:15,282 - slot_watcher - INFO - [8] Cookie accepted using text=/accept/i
+2025-11-24 01:01:15,282 - slot_watcher - INFO - [3] Cookie accepted using text=/accept/i
+2025-11-24 01:01:15,418 - slot_watcher - INFO - [7] Cookie accepted using text=/accept/i
+2025-11-24 01:01:15,452 - slot_watcher - INFO - [5] Cookie accepted using text=/accept/i
+2025-11-24 01:01:15,607 - slot_watcher - INFO - [6] Cookie accepted using text=/accept/i
+2025-11-24 01:01:16,063 - slot_watcher - INFO - [2] Cookie accepted using text=/accept/i
+2025-11-24 01:01:16,189 - slot_watcher - INFO - [1] Cookie accepted using text=/accept/i
+2025-11-24 01:01:17,380 - slot_watcher - INFO - [7] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:17,525 - slot_watcher - INFO - [3] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:17,529 - slot_watcher - INFO - [4] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:18,525 - slot_watcher - INFO - [8] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:18,552 - slot_watcher - INFO - [5] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:19,154 - slot_watcher - INFO - [1] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:20,997 - slot_watcher - WARNING - [4] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:21,010 - slot_watcher - INFO - [4] RESULT: retry
+2025-11-24 01:01:21,071 - slot_watcher - WARNING - [3] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:21,086 - slot_watcher - INFO - [3] RESULT: retry
+2025-11-24 01:01:21,166 - slot_watcher - WARNING - [7] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:21,176 - slot_watcher - INFO - [7] RESULT: retry
+2025-11-24 01:01:21,230 - slot_watcher - WARNING - [1] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:21,240 - slot_watcher - INFO - [1] RESULT: retry
+2025-11-24 01:01:21,385 - slot_watcher - WARNING - [5] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:21,395 - slot_watcher - INFO - [5] RESULT: retry
+2025-11-24 01:01:22,004 - slot_watcher - INFO - [4] Starting attempt #1
+2025-11-24 01:01:22,096 - slot_watcher - INFO - [3] Starting attempt #1
+2025-11-24 01:01:22,190 - slot_watcher - INFO - [7] Starting attempt #1
+2025-11-24 01:01:22,252 - slot_watcher - INFO - [1] Starting attempt #1
+2025-11-24 01:01:22,408 - slot_watcher - INFO - [5] Starting attempt #1
+2025-11-24 01:01:22,548 - slot_watcher - INFO - [2] Clicked Select modules (text=/select modules/i) [Attempt 1]
+2025-11-24 01:01:23,066 - slot_watcher - INFO - [6] Clicked Select modules (text=/select modules/i) [Attempt 1]
+2025-11-24 01:01:23,586 - slot_watcher - INFO - [6] RESULT: high_demand
+2025-11-24 01:01:23,979 - slot_watcher - INFO - [7] Cookie accepted using text=/accept/i
+2025-11-24 01:01:23,990 - slot_watcher - INFO - [3] Cookie accepted using text=/accept/i
+2025-11-24 01:01:24,167 - slot_watcher - INFO - [1] Cookie accepted using text=/accept/i
+2025-11-24 01:01:24,192 - slot_watcher - INFO - [4] Cookie accepted using text=/accept/i
+2025-11-24 01:01:24,192 - slot_watcher - INFO - [5] Cookie accepted using text=/accept/i
+2025-11-24 01:01:25,571 - slot_watcher - INFO - [6] Starting attempt #1
+2025-11-24 01:01:25,811 - slot_watcher - INFO - [1] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:26,055 - slot_watcher - INFO - [4] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:26,119 - slot_watcher - INFO - [7] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:26,243 - slot_watcher - INFO - [5] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:26,290 - slot_watcher - INFO - [3] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:26,478 - slot_watcher - INFO - [2] SUCCESS at https://www.goethe.de/coe/options?3
+2025-11-24 01:01:27,574 - slot_watcher - INFO - [6] Cookie accepted using text=/accept/i
+2025-11-24 01:01:28,047 - slot_watcher - WARNING - [1] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:28,057 - slot_watcher - INFO - [1] RESULT: retry
+2025-11-24 01:01:28,440 - slot_watcher - WARNING - [7] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:28,472 - slot_watcher - INFO - [7] RESULT: retry
+2025-11-24 01:01:28,622 - slot_watcher - WARNING - [4] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:28,643 - slot_watcher - INFO - [4] RESULT: retry
+2025-11-24 01:01:29,060 - slot_watcher - INFO - [1] Starting attempt #1
+2025-11-24 01:01:29,184 - slot_watcher - INFO - [6] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:29,469 - slot_watcher - INFO - [7] Starting attempt #1
+2025-11-24 01:01:29,473 - slot_watcher - INFO - [2] GUI OPENED at https://www.goethe.de/coe/options?3
+2025-11-24 01:01:29,566 - slot_watcher - WARNING - [3] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:29,587 - slot_watcher - INFO - [3] RESULT: retry
+2025-11-24 01:01:29,647 - slot_watcher - WARNING - [5] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:29,650 - slot_watcher - INFO - [4] Starting attempt #1
+2025-11-24 01:01:29,704 - slot_watcher - INFO - [5] RESULT: retry
+2025-11-24 01:01:30,575 - slot_watcher - INFO - [3] Starting attempt #1
+2025-11-24 01:01:30,716 - slot_watcher - INFO - [5] Starting attempt #1
+2025-11-24 01:01:31,205 - slot_watcher - INFO - [1] Cookie accepted using text=/accept/i
+2025-11-24 01:01:31,672 - slot_watcher - INFO - [7] Cookie accepted using text=/accept/i
+2025-11-24 01:01:31,806 - slot_watcher - WARNING - [6] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:31,833 - slot_watcher - INFO - [6] RESULT: retry
+2025-11-24 01:01:31,980 - slot_watcher - INFO - [4] Cookie accepted using text=/accept/i
+2025-11-24 01:01:32,486 - slot_watcher - INFO - [3] Cookie accepted using text=/accept/i
+2025-11-24 01:01:32,594 - slot_watcher - INFO - [5] Cookie accepted using text=/accept/i
+2025-11-24 01:01:32,845 - slot_watcher - INFO - [6] Starting attempt #1
+2025-11-24 01:01:33,170 - slot_watcher - INFO - [1] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:33,353 - slot_watcher - INFO - [4] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:33,997 - slot_watcher - INFO - [7] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:34,439 - slot_watcher - INFO - [3] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:34,882 - slot_watcher - INFO - [6] Cookie accepted using text=/accept/i
+2025-11-24 01:01:34,986 - slot_watcher - INFO - [5] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:35,027 - slot_watcher - INFO - [3] SUCCESS at https://www.goethe.de/coe/wicket/page;coesessionid=F1EC34A8978ED48C7A3111D4E7F0606E?1
+2025-11-24 01:01:36,394 - slot_watcher - WARNING - [1] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:36,407 - slot_watcher - WARNING - [4] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:36,423 - slot_watcher - INFO - [1] RESULT: retry
+2025-11-24 01:01:36,435 - slot_watcher - INFO - [4] RESULT: retry
+2025-11-24 01:01:36,547 - slot_watcher - INFO - [6] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:36,590 - slot_watcher - WARNING - [7] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:36,615 - slot_watcher - INFO - [7] RESULT: retry
+2025-11-24 01:01:36,645 - slot_watcher - INFO - [3] GUI OPENED at https://www.goethe.de/coe/wicket/page;coesessionid=F1EC34A8978ED48C7A3111D4E7F0606E?1
+2025-11-24 01:01:37,114 - slot_watcher - INFO - [6] SUCCESS at https://www.goethe.de/coe/?lang=en&oid=b7601d90379a0cc7d48d1c1b8a2cacc4374e67b572b059245fe0492b12511d69
+2025-11-24 01:01:37,437 - slot_watcher - INFO - [4] Starting attempt #1
+2025-11-24 01:01:37,437 - slot_watcher - INFO - [1] Starting attempt #1
+2025-11-24 01:01:37,615 - slot_watcher - INFO - [7] Starting attempt #1
+2025-11-24 01:01:37,779 - slot_watcher - WARNING - [5] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:37,802 - slot_watcher - INFO - [5] RESULT: retry
+2025-11-24 01:01:38,520 - slot_watcher - INFO - [6] GUI OPENED at https://www.goethe.de/coe/?lang=en&oid=b7601d90379a0cc7d48d1c1b8a2cacc4374e67b572b059245fe0492b12511d69
+2025-11-24 01:01:38,801 - slot_watcher - INFO - [5] Starting attempt #1
+2025-11-24 01:01:39,638 - slot_watcher - INFO - [4] Cookie accepted using text=/accept/i
+2025-11-24 01:01:39,733 - slot_watcher - INFO - [1] Cookie accepted using text=/accept/i
+2025-11-24 01:01:40,327 - slot_watcher - INFO - [7] Cookie accepted using text=/accept/i
+2025-11-24 01:01:40,748 - slot_watcher - INFO - [5] Cookie accepted using text=/accept/i
+2025-11-24 01:01:41,888 - slot_watcher - INFO - [4] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:41,896 - slot_watcher - INFO - [1] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:42,987 - slot_watcher - INFO - [7] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:42,993 - slot_watcher - INFO - [5] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:43,504 - slot_watcher - INFO - [7] RESULT: high_demand
+2025-11-24 01:01:45,204 - slot_watcher - WARNING - [5] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:45,224 - slot_watcher - INFO - [5] RESULT: retry
+2025-11-24 01:01:45,444 - slot_watcher - WARNING - [1] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:45,455 - slot_watcher - INFO - [1] RESULT: retry
+2025-11-24 01:01:45,516 - slot_watcher - INFO - [7] Starting attempt #1
+2025-11-24 01:01:45,758 - slot_watcher - WARNING - [4] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:45,768 - slot_watcher - INFO - [4] RESULT: retry
+2025-11-24 01:01:46,231 - slot_watcher - INFO - [5] Starting attempt #1
+2025-11-24 01:01:46,463 - slot_watcher - INFO - [1] Starting attempt #1
+2025-11-24 01:01:46,776 - slot_watcher - INFO - [4] Starting attempt #1
+2025-11-24 01:01:47,284 - slot_watcher - INFO - [7] Cookie accepted using text=/accept/i
+2025-11-24 01:01:47,699 - slot_watcher - INFO - [5] Cookie accepted using text=/accept/i
+2025-11-24 01:01:47,728 - slot_watcher - INFO - [1] Cookie accepted using text=/accept/i
+2025-11-24 01:01:48,308 - slot_watcher - INFO - [4] Cookie accepted using text=/accept/i
+2025-11-24 01:01:49,116 - slot_watcher - ERROR - [8] Run exception: Timeout 30000ms exceeded.
+=========================== logs ===========================
+"load" event fired
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\HP\Downloads\automate-main\automate-main\optimized_gpt.py", line 172, in run_once
+    await page.wait_for_load_state("networkidle")
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python39\lib\site-packages\playwright\async_api\_generated.py", line 9065, in wait_for_load_state
+    await self._impl_obj.wait_for_load_state(state=state, timeout=timeout)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python39\lib\site-packages\playwright\_impl\_page.py", line 569, in wait_for_load_state
+    return await self._main_frame.wait_for_load_state(**locals_to_params(locals()))
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python39\lib\site-packages\playwright\_impl\_frame.py", line 243, in wait_for_load_state
+    return await self._wait_for_load_state_impl(state, timeout)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python39\lib\site-packages\playwright\_impl\_frame.py", line 271, in _wait_for_load_state_impl
+    await waiter.result()
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+"load" event fired
+============================================================
+2025-11-24 01:01:49,250 - slot_watcher - INFO - [8] RESULT: exception
+2025-11-24 01:01:49,250 - slot_watcher - INFO - [8] Starting attempt #2
+2025-11-24 01:01:49,456 - slot_watcher - INFO - [7] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:49,811 - slot_watcher - INFO - [5] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:49,941 - slot_watcher - INFO - [1] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:50,130 - slot_watcher - INFO - [4] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:50,997 - slot_watcher - INFO - [8] Cookie accepted using text=/accept/i
+2025-11-24 01:01:51,806 - slot_watcher - WARNING - [7] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:51,821 - slot_watcher - INFO - [7] RESULT: retry
+2025-11-24 01:01:51,921 - slot_watcher - WARNING - [5] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:51,932 - slot_watcher - INFO - [5] RESULT: retry
+2025-11-24 01:01:51,972 - slot_watcher - WARNING - [1] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:51,982 - slot_watcher - INFO - [1] RESULT: retry
+2025-11-24 01:01:52,204 - slot_watcher - WARNING - [4] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:52,214 - slot_watcher - INFO - [4] RESULT: retry
+2025-11-24 01:01:52,820 - slot_watcher - INFO - [7] Starting attempt #1
+2025-11-24 01:01:52,946 - slot_watcher - INFO - [5] Starting attempt #1
+2025-11-24 01:01:52,977 - slot_watcher - INFO - [1] Starting attempt #1
+2025-11-24 01:01:53,139 - slot_watcher - INFO - [8] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:53,208 - slot_watcher - INFO - [4] Starting attempt #1
+2025-11-24 01:01:54,331 - slot_watcher - INFO - [7] Cookie accepted using text=/accept/i
+2025-11-24 01:01:54,508 - slot_watcher - INFO - [5] Cookie accepted using text=/accept/i
+2025-11-24 01:01:54,691 - slot_watcher - INFO - [1] Cookie accepted using text=/accept/i
+2025-11-24 01:01:54,876 - slot_watcher - INFO - [4] Cookie accepted using text=/accept/i
+2025-11-24 01:01:55,072 - slot_watcher - WARNING - [8] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:55,079 - slot_watcher - INFO - [8] RESULT: retry
+2025-11-24 01:01:55,766 - slot_watcher - INFO - [7] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:56,082 - slot_watcher - INFO - [8] Starting attempt #2
+2025-11-24 01:01:56,304 - slot_watcher - INFO - [7] SUCCESS at https://www.goethe.de/coe/?lang=en&oid=b7601d90379a0cc7d48d1c1b8a2cacc4374e67b572b059245fe0492b12511d69
+2025-11-24 01:01:56,577 - slot_watcher - INFO - [1] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:57,156 - slot_watcher - INFO - [5] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:57,231 - slot_watcher - INFO - [4] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:01:57,651 - slot_watcher - INFO - [7] GUI OPENED at https://www.goethe.de/coe/?lang=en&oid=b7601d90379a0cc7d48d1c1b8a2cacc4374e67b572b059245fe0492b12511d69
+2025-11-24 01:01:57,731 - slot_watcher - INFO - [5] RESULT: high_demand
+2025-11-24 01:01:58,094 - slot_watcher - INFO - [8] Cookie accepted using text=/accept/i
+2025-11-24 01:01:59,383 - slot_watcher - WARNING - [1] FALSE SUCCESS — URL did not change
+2025-11-24 01:01:59,395 - slot_watcher - INFO - [1] RESULT: retry
+2025-11-24 01:01:59,744 - slot_watcher - INFO - [5] Starting attempt #1
+2025-11-24 01:02:00,378 - slot_watcher - INFO - [8] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:00,390 - slot_watcher - INFO - [1] Starting attempt #1
+2025-11-24 01:02:01,328 - slot_watcher - INFO - [5] Cookie accepted using text=/accept/i
+2025-11-24 01:02:01,724 - slot_watcher - INFO - [1] Cookie accepted using text=/accept/i
+2025-11-24 01:02:02,319 - slot_watcher - WARNING - [8] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:02,330 - slot_watcher - INFO - [8] RESULT: retry
+2025-11-24 01:02:03,332 - slot_watcher - INFO - [8] Starting attempt #2
+2025-11-24 01:02:03,365 - slot_watcher - INFO - [5] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:04,200 - slot_watcher - INFO - [1] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:04,716 - slot_watcher - INFO - [8] Cookie accepted using text=/accept/i
+2025-11-24 01:02:05,509 - slot_watcher - WARNING - [5] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:05,518 - slot_watcher - INFO - [5] RESULT: retry
+2025-11-24 01:02:06,033 - slot_watcher - WARNING - [1] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:06,043 - slot_watcher - INFO - [1] RESULT: retry
+2025-11-24 01:02:06,540 - slot_watcher - INFO - [5] Starting attempt #1
+2025-11-24 01:02:06,821 - slot_watcher - INFO - [8] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:07,041 - slot_watcher - INFO - [1] Starting attempt #1
+2025-11-24 01:02:07,898 - slot_watcher - INFO - [5] Cookie accepted using text=/accept/i
+2025-11-24 01:02:08,294 - slot_watcher - INFO - [1] Cookie accepted using text=/accept/i
+2025-11-24 01:02:09,115 - slot_watcher - WARNING - [8] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:09,132 - slot_watcher - INFO - [8] RESULT: retry
+2025-11-24 01:02:10,134 - slot_watcher - INFO - [8] Starting attempt #2
+2025-11-24 01:02:10,388 - slot_watcher - INFO - [5] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:10,523 - slot_watcher - INFO - [1] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:11,563 - slot_watcher - INFO - [8] Cookie accepted using text=/accept/i
+2025-11-24 01:02:12,183 - slot_watcher - WARNING - [5] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:12,196 - slot_watcher - INFO - [5] RESULT: retry
+2025-11-24 01:02:12,222 - slot_watcher - WARNING - [1] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:12,232 - slot_watcher - INFO - [1] RESULT: retry
+2025-11-24 01:02:13,211 - slot_watcher - INFO - [5] Starting attempt #1
+2025-11-24 01:02:13,241 - slot_watcher - INFO - [1] Starting attempt #1
+2025-11-24 01:02:13,287 - slot_watcher - INFO - [8] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:14,694 - slot_watcher - INFO - [5] Cookie accepted using text=/accept/i
+2025-11-24 01:02:14,757 - slot_watcher - INFO - [1] Cookie accepted using text=/accept/i
+2025-11-24 01:02:15,856 - slot_watcher - WARNING - [8] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:15,866 - slot_watcher - INFO - [8] RESULT: retry
+2025-11-24 01:02:16,537 - slot_watcher - INFO - [1] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:16,880 - slot_watcher - INFO - [8] Starting attempt #2
+2025-11-24 01:02:16,941 - slot_watcher - INFO - [5] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:18,060 - slot_watcher - INFO - [8] Cookie accepted using text=/accept/i
+2025-11-24 01:02:18,743 - slot_watcher - WARNING - [1] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:18,767 - slot_watcher - INFO - [1] RESULT: retry
+2025-11-24 01:02:19,136 - slot_watcher - WARNING - [5] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:19,147 - slot_watcher - INFO - [5] RESULT: retry
+2025-11-24 01:02:19,768 - slot_watcher - INFO - [1] Starting attempt #1
+2025-11-24 01:02:20,155 - slot_watcher - INFO - [5] Starting attempt #1
+2025-11-24 01:02:20,562 - slot_watcher - INFO - [8] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:21,197 - slot_watcher - INFO - [1] Cookie accepted using text=/accept/i
+2025-11-24 01:02:21,773 - slot_watcher - INFO - [5] Cookie accepted using text=/accept/i
+2025-11-24 01:02:22,842 - slot_watcher - WARNING - [8] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:22,855 - slot_watcher - INFO - [8] RESULT: retry
+2025-11-24 01:02:23,430 - slot_watcher - INFO - [1] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:23,743 - slot_watcher - INFO - [5] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:23,858 - slot_watcher - INFO - [8] Starting attempt #2
+2025-11-24 01:02:25,330 - slot_watcher - INFO - [8] Cookie accepted using text=/accept/i
+2025-11-24 01:02:25,696 - slot_watcher - WARNING - [1] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:25,708 - slot_watcher - INFO - [1] RESULT: retry
+2025-11-24 01:02:26,614 - slot_watcher - WARNING - [5] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:26,624 - slot_watcher - INFO - [5] RESULT: retry
+2025-11-24 01:02:26,716 - slot_watcher - INFO - [1] Starting attempt #1
+2025-11-24 01:02:27,621 - slot_watcher - INFO - [5] Starting attempt #1
+2025-11-24 01:02:28,092 - slot_watcher - INFO - [8] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:28,162 - slot_watcher - INFO - [1] Cookie accepted using text=/accept/i
+2025-11-24 01:02:28,208 - slot_watcher - ERROR - [4] Run exception: Timeout 30000ms exceeded.
+=========================== logs ===========================
+"load" event fired
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\HP\Downloads\automate-main\automate-main\optimized_gpt.py", line 172, in run_once
+    await page.wait_for_load_state("networkidle")
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python39\lib\site-packages\playwright\async_api\_generated.py", line 9065, in wait_for_load_state
+    await self._impl_obj.wait_for_load_state(state=state, timeout=timeout)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python39\lib\site-packages\playwright\_impl\_page.py", line 569, in wait_for_load_state
+    return await self._main_frame.wait_for_load_state(**locals_to_params(locals()))
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python39\lib\site-packages\playwright\_impl\_frame.py", line 243, in wait_for_load_state
+    return await self._wait_for_load_state_impl(state, timeout)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python39\lib\site-packages\playwright\_impl\_frame.py", line 271, in _wait_for_load_state_impl
+    await waiter.result()
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+"load" event fired
+============================================================
+2025-11-24 01:02:28,295 - slot_watcher - INFO - [4] RESULT: exception
+2025-11-24 01:02:28,296 - slot_watcher - INFO - [4] Starting attempt #2
+2025-11-24 01:02:28,571 - slot_watcher - INFO - [8] RESULT: high_demand
+2025-11-24 01:02:28,996 - slot_watcher - INFO - [5] Cookie accepted using text=/accept/i
+2025-11-24 01:02:29,727 - slot_watcher - INFO - [4] Cookie accepted using text=/accept/i
+2025-11-24 01:02:30,574 - slot_watcher - INFO - [8] Starting attempt #2
+2025-11-24 01:02:30,734 - slot_watcher - INFO - [1] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:31,357 - slot_watcher - INFO - [5] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:31,961 - slot_watcher - INFO - [4] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:32,127 - slot_watcher - INFO - [8] Cookie accepted using text=/accept/i
+2025-11-24 01:02:33,429 - slot_watcher - WARNING - [5] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:33,440 - slot_watcher - INFO - [5] RESULT: retry
+2025-11-24 01:02:33,477 - slot_watcher - WARNING - [1] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:33,499 - slot_watcher - INFO - [1] RESULT: retry
+2025-11-24 01:02:33,866 - slot_watcher - INFO - [8] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:34,271 - slot_watcher - WARNING - [4] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:34,405 - slot_watcher - INFO - [4] RESULT: retry
+2025-11-24 01:02:34,450 - slot_watcher - INFO - [5] Starting attempt #1
+2025-11-24 01:02:34,509 - slot_watcher - INFO - [1] Starting attempt #1
+2025-11-24 01:02:35,431 - slot_watcher - INFO - [4] Starting attempt #2
+2025-11-24 01:02:36,525 - slot_watcher - WARNING - [8] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:36,554 - slot_watcher - INFO - [8] RESULT: retry
+2025-11-24 01:02:36,835 - slot_watcher - INFO - [5] Cookie accepted using text=/accept/i
+2025-11-24 01:02:37,093 - slot_watcher - INFO - [1] Cookie accepted using text=/accept/i
+2025-11-24 01:02:37,209 - slot_watcher - INFO - [4] Cookie accepted using text=/accept/i
+2025-11-24 01:02:37,570 - slot_watcher - INFO - [8] Starting attempt #2
+2025-11-24 01:02:38,551 - slot_watcher - INFO - [5] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:38,703 - slot_watcher - INFO - [4] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:39,121 - slot_watcher - INFO - [1] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:39,273 - slot_watcher - INFO - [4] SUCCESS at https://www.goethe.de/coe/?lang=en&oid=b7601d90379a0cc7d48d1c1b8a2cacc4374e67b572b059245fe0492b12511d69
+2025-11-24 01:02:39,312 - slot_watcher - INFO - [8] Cookie accepted using text=/accept/i
+2025-11-24 01:02:40,728 - slot_watcher - INFO - [4] GUI OPENED at https://www.goethe.de/coe/?lang=en&oid=b7601d90379a0cc7d48d1c1b8a2cacc4374e67b572b059245fe0492b12511d69
+2025-11-24 01:02:40,794 - slot_watcher - WARNING - [5] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:40,806 - slot_watcher - INFO - [5] RESULT: retry
+2025-11-24 01:02:41,405 - slot_watcher - INFO - [8] Clicked Select modules (text=Select modules) [Attempt 1]
+2025-11-24 01:02:41,438 - slot_watcher - WARNING - [1] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:41,560 - slot_watcher - INFO - [1] RESULT: retry
+2025-11-24 01:02:41,816 - slot_watcher - INFO - [5] Starting attempt #1
+2025-11-24 01:02:42,557 - slot_watcher - INFO - [1] Starting attempt #1
+2025-11-24 01:02:43,974 - slot_watcher - INFO - [5] Cookie accepted using text=/accept/i
+2025-11-24 01:02:44,218 - slot_watcher - WARNING - [8] FALSE SUCCESS — URL did not change
+2025-11-24 01:02:44,232 - slot_watcher - INFO - [8] RESULT: retry
+2025-11-24 01:02:44,273 - slot_watcher - INFO - [1] Cookie accepted using text=/accept/i

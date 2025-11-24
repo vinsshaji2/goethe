@@ -9,7 +9,7 @@ import logging
 import json
 from datetime import datetime
 from playwright.async_api import async_playwright
-from vins import stealth_config
+import stealth_config
 import os
 
 
@@ -911,12 +911,13 @@ async def main():
     """Main entry point."""
     
     # Configuration
-    start_url = 'https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=0C009CD886DDA9D3DF895F917B9D58047C83DB7FEAC7ACB00EFE02AE84C39DF48DC8EDC8DD10784A8EE7AFD305D318D5E8AD87C35FD0039AA52F821E9C84CBBA'
+    start_url = 'https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=045A9FD9828AAAD7DADF02972FCE5E5227828A74EB97FDB65AFC01ACD7CA9DFA8CCDEB9DDF16294EDAEBA98450DF1A8CEBFA89C604D302C6A07A8716C9DF98BE'
     headless = False  # Always starts headless, shows GUI on success
     gui_display_seconds = 200000000  # How many seconds to display GUI on success
     
     # Generate authenticated proxies and load accounts
-    proxies = generate_authenticated_proxies(num_proxies=100)  # Generate 100 authenticated proxies
+    # proxies = generate_authenticated_proxies(num_proxies=100)  # Generate 100 authenticated proxies
+    proxies = []  # Generate 100 authenticated proxies
     accounts = load_accounts("accounts.json")
     
     print("\n" + "="*80)
@@ -946,7 +947,7 @@ async def main():
     print(f"\n🚀 Starting {n} parallel browser tests...")
     print(f"📊 Each session will test: LISTENING, READING")
     print(f"🔒 Each session will use unique stealth fingerprint")
-    print(f"🌐 Proxies: {len(proxies)} authenticated proxies generated")
+    # print(f"🌐 Proxies: {len(proxies)} authenticated proxies generated")
     print(f"👤 Accounts: {len(accounts)} loaded from accounts.json")
     print(f"�️  Mode: Headless → GUI on Success ({gui_display_seconds}s)")
     print("\n" + "="*80 + "\n")
