@@ -64,7 +64,7 @@ data_list = [
     ('Meenakshi Kallayil Prabin', 'Trissur', '6282240548', 'Schreiben', 'meenakshikp379@gmail.com'),
     ('Sonamol Saji', 'Idukki', '9778570668', 'Lesen', 'sonamolsaji98@gmail.com'),
     ('Ann Mariya Tenson', 'Ernakulam', '9946920159', 'Lesen, Hören', 'annmariyatenson651@gmail.com'),
-    ('Rinzila Mohammad Saleem', 'Palakkad', '7902445774', 'Schreiben', 'rinzilasaleem1@gmail.com')
+    ('Rinzila Mohammed Saleem', 'Palakkad', '7902445774', 'Schreiben', 'rinzilasaleem1@gmail.com')
 ]
 
 

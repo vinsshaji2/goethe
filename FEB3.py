@@ -12,6 +12,7 @@ to = 'exams.deutschzeit@gmail.com'
 Subject = "Testmail"
 
 email_accounts = [
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'rahulchandran2323@gmail.com', 'password': 'zhqh ixyw gqnv wffu', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'treesahanna1308@gmail.com', 'password': 'byyn gdqx vefb fjoq', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'ayonajohn4240@gmail.com', 'password': 'rwuw ahtt abbb wfdu', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'vmmeenu3@gmail.com', 'password': 'nrma eyra ezhr yhrl', 'to': to, 'subject': Subject},
@@ -40,6 +41,7 @@ email_accounts = [
 
 # Example dynamic data
 data_list = [
+    ('Rahul Chandran', 'Kottayam', '+91 8304055707', 'Sprechen', 'rahulchandran2323@gmail.com'),
     ('Treesahanna', 'Ernakulam', '8590964552', 'Sprechen', 'treesahanna1308@gmail.com'),
     ('Ayona John', 'Idukki', '70128 99342', 'Sprechen', 'ayonajohn4240@gmail.com'),
     ('Meenakshy Vallassery Murphy', 'Ernakulam', '7356043339', 'Sprechen', 'vmmeenu3@gmail.com'),
