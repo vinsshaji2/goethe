@@ -7,11 +7,11 @@ from multiprocessing import Process
 from playwright.sync_api import sync_playwright
 
 full_module = False
-index_number = 0
+index_number = 2
 
 # Map module names to their XPaths
 module_xpaths = {
-    "Lesen": "//section[@id='examSection]/div/div[3]/div[4]/form/div/div[3]/div[4]/div[1]/div/label[1]/span[1]",
+    "Lesen": "//section[@id='examSection']/div/div[3]/div[4]/form/div/div[3]/div[4]/div[1]/div/label[1]/span[1]",
     "Horen": "//section[@id='examSection']/div/div[3]/div[4]/form/div/div[3]/div[4]/div[1]/div/label[2]/span[1]",
     "Schreiben": "//section[@id='examSection']/div/div[3]/div[4]/form/div/div[3]/div[4]/div[1]/div/label[3]/span[1]",
     "Sprechen": "//section[@id='examSection']/div/div[3]/div[4]/form/div/div[3]/div[4]/div[1]/div/label[4]/span[1]",
@@ -39,8 +39,6 @@ def login(page, username, password):
 
     # Click Login
     page.click("#loginBtn")
-    # page.click("#loginBtn")
-    # time.sleep(1)
 
     # Accept cookies again (if shown after login)
     try:
@@ -126,8 +124,6 @@ def process_upi_payment(page, upi_id):
     time.sleep(2)
 
     try:
-        # Strategy 1: Find button with specific attributes (most reliable)
-        # This button has data-testid="collect-pay-button" and data-payment-category="upi"
         pay_button = None
 
         selectors_priority = [
@@ -146,7 +142,7 @@ def process_upi_payment(page, upi_id):
             except:
                 continue
 
-        # Strategy 2: Find by text pattern - any button with "Pay" followed by currency/amount
+        # Strategy 2: Find by text pattern
         if not pay_button:
             print("  Searching buttons by text pattern...")
             all_buttons = frame.locator("button[type='submit']").all()
@@ -156,10 +152,8 @@ def process_upi_payment(page, upi_id):
                     btn_text = btn.inner_text()
                     print(f"    Found button: '{btn_text}'")
 
-                    # Match "Pay ₹XXXX" or "Pay Rs XXXX" or just "Pay" with numbers
                     if ("Pay" in btn_text and (
                             "₹" in btn_text or "Rs" in btn_text or any(char.isdigit() for char in btn_text))):
-                        # Exclude QR-related buttons
                         if "QR" not in btn_text and "Show" not in btn_text:
                             pay_button = btn
                             print(f"    ✓ Matched Pay button: '{btn_text}'")
@@ -167,14 +161,13 @@ def process_upi_payment(page, upi_id):
                 except:
                     continue
 
-        # Strategy 3: Get all pay-button name buttons and pick the right one
+        # Strategy 3: Fallback method
         if not pay_button:
             print("  Trying fallback method...")
             try:
                 all_pay_buttons = frame.locator("button[name='pay-button']").all()
                 for btn in all_pay_buttons:
                     text = btn.inner_text()
-                    # Exclude QR buttons
                     if "QR" not in text and "Show" not in text and "Scan" not in text:
                         pay_button = btn
                         print(f"    ✓ Fallback found: '{text}'")
@@ -184,7 +177,6 @@ def process_upi_payment(page, upi_id):
 
         # Click the button if found
         if pay_button:
-            # Check if disabled
             if pay_button.is_disabled():
                 print("  Button is disabled, waiting...")
                 try:
@@ -206,7 +198,7 @@ def process_upi_payment(page, upi_id):
             print("\n  Debug - All buttons found:")
             try:
                 all_btns = frame.locator("button").all()
-                for i, btn in enumerate(all_btns[:10]):  # First 10 buttons
+                for i, btn in enumerate(all_btns[:10]):
                     try:
                         text = btn.inner_text()
                         btn_type = btn.get_attribute("type")
@@ -226,27 +218,115 @@ def process_upi_payment(page, upi_id):
         return False
 
 
+def get_span_text(page, username):
+    """
+    Retrieve and validate span text with multiple fallback methods.
+    Returns the span text if valid, None otherwise.
+    """
+    try:
+        span_xpath = "xpath=//section[@id='examSection']/div/div[3]/div[4]/form/div/div[1]/div[8]/p/span"
+        span_locator = page.locator(span_xpath)
+
+        # Wait for element to be visible
+        print(f"[{username}] Waiting for span element...")
+        span_locator.wait_for(state="visible", timeout=10000)
+
+        # Additional wait for content to populate
+        time.sleep(1)
+
+        # Try multiple methods to get the text
+        span_text = None
+
+        # Method 1: text_content()
+        try:
+            span_text = span_locator.text_content()
+            if span_text:
+                print(f"[{username}] Method 1 (text_content): '{span_text}'")
+        except:
+            pass
+
+        # Method 2: inner_text()
+        if not span_text or not span_text.strip():
+            try:
+                span_text = span_locator.inner_text()
+                if span_text:
+                    print(f"[{username}] Method 2 (inner_text): '{span_text}'")
+            except:
+                pass
+
+        # Method 3: evaluate
+        if not span_text or not span_text.strip():
+            try:
+                span_text = span_locator.evaluate("el => el.textContent")
+                if span_text:
+                    print(f"[{username}] Method 3 (evaluate): '{span_text}'")
+            except:
+                pass
+
+        # Clean and validate
+        if span_text:
+            span_text = span_text.strip()
+            print(f"[{username}] Final span_text: '{span_text}'")
+
+            # Check if valid (not empty, not "0", not "1")
+            if span_text and span_text not in ["0", "1", ""]:
+                print(f"[{username}] ✓ Span text is VALID: '{span_text}'")
+                return span_text
+            else:
+                print(f"[{username}] ✗ Span text is INVALID: '{span_text}'")
+                return None
+        else:
+            print(f"[{username}] ✗ Span text is empty or None")
+            return None
+
+    except Exception as e:
+        print(f"[{username}] ❌ Error getting span text: {e}")
+
+        # Debug information
+        try:
+            element_count = page.locator(
+                "xpath=//section[@id='examSection']/div/div[3]/div[4]/form/div/div[1]/div[8]/p/span"
+            ).count()
+            print(f"[{username}] Debug: Found {element_count} matching span elements")
+
+            # Try to get parent paragraph text
+            parent_text = page.locator(
+                "xpath=//section[@id='examSection']/div/div[3]/div[4]/form/div/div[1]/div[8]/p"
+            ).text_content()
+            print(f"[{username}] Debug: Parent <p> text: '{parent_text}'")
+        except:
+            pass
+
+        return None
+
+
+def refresh_page(page, username):
+    """Refresh the exam section"""
+    print(f"[{username}] 🔄 Refreshing page...")
+    try:
+        page.click("xpath=//section[@id='examSection']/div/div[2]/div/div")
+        page.click("xpath=//section[@id='examSection']/div/div[2]/div/div[2]/div")
+        print(f"[{username}] ✓ Page refreshed")
+    except Exception as e:
+        print(f"[{username}] ⚠ Error during refresh: {e}")
+
+
 def run_instance(username, password, module, upi):
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)  # headless=True for silent mode
-        context = browser.new_context(storage_state=None)  # fresh session
+        browser = p.chromium.launch(headless=False)
+        context = browser.new_context(storage_state=None)
         page = context.new_page()
 
         # Do login
         login(page, username, password)
+
         try:
             while True:
-
-                # ################full module###################
-                # span_text = page.text_content(
-                #     "xpath=//section[@id='examSection']/div/div[3]/div[4]/form/div/div[1]/div[8]/p/span"
-                # )
-                ######modular wise#################
-
                 # Check if the option at index_number is enabled
                 try:
                     select_element = page.locator(
-                        "xpath=//*[@id='examSection']/div/div[3]/div[4]/form/div/div[1]/div[1]/div/select")
+                        "xpath=//*[@id='examSection']/div/div[3]/div[4]/form/div/div[1]/div[1]/div/select"
+                    )
                     options = select_element.locator("option").all()
 
                     if len(options) > index_number:
@@ -254,10 +334,14 @@ def run_instance(username, password, module, upi):
                         is_disabled = option.get_attribute("disabled")
 
                         if is_disabled is None:  # Option is enabled
-                            # Keep retrying until option is found
+                            print(f"[{username}] ✓ Option at index {index_number} is enabled")
+
+                            # Keep retrying until option is selected
                             option_selected = False
                             retry_count = 0
-                            while not option_selected:
+                            max_retries = 5
+
+                            while not option_selected and retry_count < max_retries:
                                 try:
                                     print(f"[{username}] Attempting to select option (attempt {retry_count + 1})...")
                                     page.select_option(
@@ -266,79 +350,116 @@ def run_instance(username, password, module, upi):
                                     )
                                     option_selected = True
                                     print(f"[{username}] ✓ Option selected successfully!")
-                                    span_text = page.text_content(
-                                        "xpath=//section[@id='examSection']/div/div[3]/div[4]/form/div/div[1]/div[8]/p/span"
-                                    )
-                                    print(f"[{username}] span_text:", span_text)
-                                    if span_text and span_text.strip() not in ["0", "1"]:
-                                        print(f"[{username}] Span has content:", span_text)
-                                        page.click(
-                                            "xpath=//section[@id='examSection']/div/div[3]/div[4]/form/div/div[2]/div[1]/button/span")
-                                        if module.lower().strip() == "full module":
-                                            # Click Payment Button
-                                            page.click(
-                                                "xpath=//section[@id='examSection']/div/div[3]/div[4]/form/div/div[3]/div[4]/div[2]/button/span"
-                                            )
-                                        else:
-                                            page.click(
-                                                "//*[@id='examSection']/div/div[3]/div[4]/form/div/div[3]/div[3]/label[2]/span[1]")
-                                            # Split your variable (comma-separated values)
-                                            for mod in [m.strip() for m in module.split(",")]:
-                                                xpath = module_xpaths.get(mod)
-                                                if xpath:
-                                                    page.click(xpath)
-                                                    print(f"[{username}] ✅ Selected module: {mod}")
-                                                else:
-                                                    print(f"[{username}] ⚠️ Unknown module: {mod}")
-                                            page.click(
-                                                "xpath=//section[@id='examSection']/div/div[3]/div[4]/form/div/div[3]/div[4]/div[2]/button/span"
-                                            )
-                                        success = process_upi_payment(page, upi)
 
-                                        if success:
-                                            print("\n✅ Payment process completed successfully!")
-                                            print("Waiting 60 seconds to complete payment...")
-                                        else:
-                                            print("\n⚠ Payment process incomplete - check manually")
-                                            print("Waiting 30 seconds for manual intervention...")
-
-                                        time.sleep(1000)  # keep session alive
-                                        break
-                                    else:
-                                        print(f"[{username}] Span is empty, refreshing...")
-                                        page.click("xpath=//section[@id='examSection']/div/div[2]/div/div")
-                                        page.click("xpath=//section[@id='examSection']/div/div[2]/div/div[2]/div")
                                 except Exception as e:
                                     retry_count += 1
-                                    print(
-                                        f"[{username}] ⚠ Option not found yet (attempt {retry_count}), retrying in 2 seconds...")
+                                    print(f"[{username}] ⚠ Selection failed (attempt {retry_count}): {e}")
+
+                            if not option_selected:
+                                print(f"[{username}] ✗ Failed to select option after {max_retries} attempts")
+                                refresh_page(page, username)
+                                continue
+
+                            # Now check span text - CRITICAL VALIDATION
+                            span_text = get_span_text(page, username)
+
+                            if span_text:  # Only proceed if span text is valid
+                                print(f"[{username}] ✅ SPAN TEXT IS VALID - Proceeding with booking...")
+
+                                # Click the proceed button
+                                page.click(
+                                    "xpath=//section[@id='examSection']/div/div[3]/div[4]/form/div/div[2]/div[1]/button/span"
+                                )
+                                time.sleep(.5)
+
+                                # Handle module selection
+                                if module.lower().strip() == "full module":
+                                    print(f"[{username}] Selecting FULL MODULE")
+                                    # Click Payment Button for full module
+                                    page.click(
+                                        "xpath=//section[@id='examSection']/div/div[3]/div[4]/form/div/div[3]/div[4]/div[2]/button/span"
+                                    )
+                                else:
+                                    print(f"[{username}] Selecting MODULAR: {module}")
+                                    # Click modular option
+                                    page.click(
+                                        "//*[@id='examSection']/div/div[3]/div[4]/form/div/div[3]/div[3]/label[2]/span[1]"
+                                    )
+
+                                    # Select individual modules
+                                    for mod in [m.strip() for m in module.split(",")]:
+                                        xpath = module_xpaths.get(mod)
+                                        if xpath:
+                                            page.click(xpath)
+                                            print(f"[{username}] ✅ Selected module: {mod}")
+                                        else:
+                                            print(f"[{username}] ⚠️ Unknown module: {mod}")
+
+                                    time.sleep(1)
+                                    # Click payment button for modular
+                                    page.click(
+                                        "xpath=//section[@id='examSection']/div/div[3]/div[4]/form/div/div[3]/div[4]/div[2]/button/span"
+                                    )
+
+                                time.sleep(3)
+
+                                # Process UPI payment
+                                print(f"[{username}] 💳 Processing payment...")
+                                success = process_upi_payment(page, upi)
+
+                                if success:
+                                    print(f"\n[{username}] ✅ Payment process completed successfully!")
+                                    print(f"[{username}] Waiting for payment confirmation...")
+                                    time.sleep(1000)  # Keep session alive
+                                else:
+                                    print(f"\n[{username}] ⚠ Payment process incomplete - check manually")
+                                    time.sleep(30)
+
+                                break  # Exit the loop after successful attempt
+
+                            else:
+                                # Span text is invalid - refresh and try again
+                                print(f"[{username}] ✗ SPAN TEXT IS INVALID - Refreshing...")
+                                refresh_page(page, username)
+
                         else:
-                            print(f"[{username}] Option is disabled, refreshing...")
-                            page.click("xpath=//section[@id='examSection']/div/div[2]/div/div")
-                            page.click("xpath=//section[@id='examSection']/div/div[2]/div/div[2]/div")
+                            # Option is disabled
+                            print(f"[{username}] ✗ Option at index {index_number} is disabled")
+                            refresh_page(page, username)
                     else:
-                        print(f"[{username}] Option index not found, refreshing...")
-                        page.click("xpath=//section[@id='examSection']/div/div[2]/div/div")
-                        page.click("xpath=//section[@id='examSection']/div/div[2]/div/div[2]/div")
+                        # Option index not found
+                        print(f"[{username}] ✗ Option index {index_number} not found (only {len(options)} options)")
+                        refresh_page(page, username)
 
                 except Exception as e:
-                    print(f"[{username}] Error checking option: {e}, refreshing...")
-                    page.click("xpath=//section[@id='examSection']/div/div[2]/div/div")
-                    page.click("xpath=//section[@id='examSection']/div/div[2]/div/div[2]/div")
+                    print(f"[{username}] ❌ Error in main loop: {e}")
+                    import traceback
+                    traceback.print_exc()
+                    refresh_page(page, username)
 
+        except KeyboardInterrupt:
+            print(f"\n[{username}] 🛑 Stopped by user")
         except Exception as e:
-            print("EXCEPTION OCCURED:", e)
+            print(f"[{username}] ❌ FATAL EXCEPTION: {e}")
+            import traceback
+            traceback.print_exc()
+        finally:
+            browser.close()
 
 
 def main():
     # Read Excel file
-    df = pd.read_excel("accounts.xlsx")  # Must have columns: username, password, modules
+    df = pd.read_excel("accounts.xlsx")  # Must have columns: username, password, modules, upid
 
     processes = []
     for _, row in df.iterrows():
-        p = Process(target=run_instance, args=(row["username"], row["password"], row["modules"], row["upid"]))
+        p = Process(
+            target=run_instance,
+            args=(row["username"], row["password"], row["modules"], row["upid"])
+        )
         p.start()
         processes.append(p)
+        time.sleep(.5)  # Stagger the starts
 
     # Wait for all processes
     for p in processes:
