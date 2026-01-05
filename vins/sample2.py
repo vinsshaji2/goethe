@@ -507,12 +507,12 @@ async def main():
     """Main entry point."""
 
     # Configuration
-    start_url ='https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=585B9CDED2DFA886DADB55977CCF51567DD58E74B9C4ABE70FF451FBD4C598FB89CBEE9E83147918DEBAF48503D01E87E7FA8FC45686059BF3788A4799869BE7'
+    start_url ='https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=5B0B9FDBD488F9D0DFDA56C37EC858517A848C75BBC3F9B108F501AB83C098AF8C9CEECF8B102C4788EFAED602834982EBFCDB920685529AF67D871E9F83C9BA'
     gui_display_seconds = 10000000000000  # Wait time after button click & GUI display time
 
     # Generate authenticated proxies
-    proxies = generate_authenticated_proxies(num_proxies=100)
-
+    # proxies = generate_authenticated_proxies(num_proxies=100)
+    proxies = []
     print("\n" + "=" * 80)
     print("PARALLEL BROWSER WITH SELECT MODULE AUTO-CLICKER")
     print("=" * 80)

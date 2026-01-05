@@ -537,7 +537,7 @@ class MultipleBrowserTest:
                 
                 # Launch browser (always start headless)
                 browser = await p.chromium.launch(
-                    headless=True,  # Always start in headless mode
+                    headless=False,  # Always start in headless mode
                     slow_mo=50,
                     args=[
                         '--disable-blink-features=AutomationControlled',
@@ -595,12 +595,12 @@ class MultipleBrowserTest:
                 
                 # Navigate to URL
                 self.logger.info("Navigating to booking page...")
-                await self.page.goto(self.start_url, wait_until='domcontentloaded', timeout=300000)
-                await asyncio.sleep(1)
+                await self.page.goto(self.start_url, wait_until='domcontentloaded', timeout=12000)
+                # await asyncio.sleep(1)
                 
                 # Handle cookie consent first
                 await self.handle_cookie_consent()
-                await asyncio.sleep(1)
+                # await asyncio.sleep(1)
                 
                 # Click "Select modules" button
                 self.logger.info("Clicking 'Select modules' button...")
@@ -866,13 +866,13 @@ def generate_authenticated_proxies(num_proxies: int = 1000):
     Returns:
         List of authenticated proxy URLs
     """
-    username = 'spii5uqapq'
-    password = 'fwThVwm=4g8is04FeZ'
-    proxy_host = 'gate.decodo.com'
+    username = 'fcd44ba0b1592d514153'
+    password = 'd3abe7b7a68ec8dd'
+    proxy_host = 'gw.dataimpulse.com'
     
     # Generate proxies with different ports (starting from 10001)
     proxies = []
-    base_port = 10001
+    base_port = 823
     
     for i in range(num_proxies):
         port = base_port + i
@@ -911,13 +911,65 @@ async def main():
     """Main entry point."""
     
     # Configuration
-    start_url = 'https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=045A9FD9828AAAD7DADF02972FCE5E5227828A74EB97FDB65AFC01ACD7CA9DFA8CCDEB9DDF16294EDAEBA98450DF1A8CEBFA89C604D302C6A07A8716C9DF98BE'
+    start_url = 'https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=090898DCD289FCD38EDA03C02D9E59552E808B2FBECDFCE15BA903AE8691CFF98E9EEDCB8A1F281B8EE8FD860ED61A84EEFD8CC4528352CEAF2682129B84CDBE'
     headless = False  # Always starts headless, shows GUI on success
     gui_display_seconds = 200000000  # How many seconds to display GUI on success
     
     # Generate authenticated proxies and load accounts
     # proxies = generate_authenticated_proxies(num_proxies=100)  # Generate 100 authenticated proxies
-    proxies = []  # Generate 100 authenticated proxies
+    # proxies = []  # Generate 100 authenticated proxies
+    proxies = [
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10000',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10001',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10002',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10003',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10004',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10005',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10006',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10007',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10008',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10009',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10010',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10011',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10012',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10013',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10014',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10015',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10016',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10017',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10018',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10019',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10020',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10021',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10022',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10023',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10024',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10025',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10026',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10027',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10028',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10029',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10030',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10031',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10032',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10033',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10034',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10035',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10036',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10037',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10038',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10039',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10040',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10041',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10042',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10043',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10044',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10045',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10046',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10047',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10048',
+        'fcd44ba0b1592d514153__cr.de;state.bavaria;city.munich;zip.80333:d3abe7b7a68ec8dd@gw.dataimpulse.com:10049'
+    ]
     accounts = load_accounts("accounts.json")
     
     print("\n" + "="*80)

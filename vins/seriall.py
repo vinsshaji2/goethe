@@ -92,7 +92,7 @@ class MultipleBrowserTest:
     async def check_url_has_options(self):
         """Check if current URL contains 'options' keyword."""
         current_url = self.page.url
-        has_options = 'options' or 'coe' in current_url.lower()
+        has_options = ('options' in current_url.lower()) or ('coe' in current_url.lower())
         self.logger.info(f"Current URL: {current_url}")
         self.logger.info(f"URL contains 'options': {has_options}")
         return has_options
@@ -266,8 +266,9 @@ class MultipleBrowserTest:
                 await self.handle_cookie_consent()
                 await asyncio.sleep(.5)
 
-                # Click "Select modules" button
+                # ---------------- CLICK SELECT MODULES BUTTON ------------------
                 self.logger.info("Clicking 'Select modules' button...")
+
                 select_button_selectors = [
                     'text="Select modules"',
                     'button:has-text("Select modules")',
@@ -277,15 +278,20 @@ class MultipleBrowserTest:
                 button_clicked = False
                 for selector in select_button_selectors:
                     try:
-                        await self.page.click(selector, timeout=5000)
-                        button_clicked = True
-                        break
+                        btn = self.page.locator(selector)
+                        if await btn.count() > 0:
+                            await btn.first.click(timeout=5000)
+                            button_clicked = True
+                            self.logger.info("✅ 'Select modules' button clicked")
+                            await asyncio.sleep(0.5)
+                            break
                     except Exception:
                         continue
 
-                if button_clicked:
-                    self.logger.info("✅ 'Select modules' button clicked")
-                    await asyncio.sleep(.5)
+                if not button_clicked:
+                    self.logger.warning("❌ Could not find 'Select modules' button")
+                    self.result = 'no_select_button'
+                    return False
 
                 # Check for errors AFTER clicking Select modules
                 self.logger.info("Checking for errors...")
@@ -441,9 +447,9 @@ class SerialTestManager:
 
 
 def generate_authenticated_proxies(num_proxies: int = 1000):
-    username = 'spii5uqapq'
-    password = 'fwThVwm=4g8is04FeZ'
-    proxy_host = 'gate.decodo.com'
+    username = 'spw4p88v6c'
+    password = 'fDwWo7mIm04xKmh5~e'
+    proxy_host = 'dc.decodo.com'
 
     proxies = []
     base_port = 10001
@@ -472,13 +478,13 @@ def load_accounts(accounts_file: str = "accounts.json"):
 
 
 async def main():
-    start_url = 'https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=5B0BCAD2D186FB86DF8E50C67D9F585628878E7EBB90FCEB0BFA07ACD4C298ADD8CBBF9E8F12284ED8BBA8D30EDE4383EBF2D89150D40298A57AD042CD869AE6'
+    start_url   = 'https://www.goethe.de/ins/in/en/spr/prf/gzb2.cfm?examId=585ACE89868FA9D5D6DD50962CC95A5527D4DB74EC96A9E201FE01A982C6C3A8DFCEB8C5DF167A1B88B8FBD20FDE42D6EEAEDB9701D704CCF57D8712CA81CDEA'
     headless = False
     gui_display_seconds = 200000000
 
-    # proxies = generate_authenticated_proxies(num_proxies=100)
+    proxies = generate_authenticated_proxies(num_proxies=100)
     accounts = load_accounts("accounts.json")
-    proxies = []
+    # proxies = []
 
     print("\n" + "=" * 80)
     print("SERIAL BROWSER TEST - ONE AT A TIME UNTIL SUCCESS")
