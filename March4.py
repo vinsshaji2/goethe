@@ -27,6 +27,7 @@ email_accounts = [
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'angelmariyathankachan2006@gmail.com', 'password': 'vhzn zurm htfn jlxy', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'bisminsafriya@gmail.com', 'password': 'eqdj exkb sdpl zdfu', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'amalkrishnaamal4050k@gmail.com', 'password': 'mufv cyiv rkwl bifl', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'ashaantony650@gmail.com', 'password': 'xlcx bvbv umlo hviw', 'to': to, 'subject': Subject},
 ]
 
 # Example dynamic data
@@ -45,8 +46,8 @@ data_list = [
     ('SMRITHILA T.R', 'Ernakulam', '6282449072', 'Lesen', 'smrithilatr72@gmail.com'),
     ('Angel Mariya Thankachan', 'Idukki', '6235461702', 'Sprechen', 'angelmariyathankachan2006@gmail.com'),
     ('Bismin Safriya', 'Ernakulam', '88482 81770', 'Schreiben', 'bisminsafriya@gmail.com'),
-    ('Amal Krishna Kalathiparambil Unni Krishnan', 'Thrissur', '7510748139', 'Sprechen', 'amalkrishnaamal4050k@gmail.com')
-
+    ('Amal Krishna Kalathiparambil Unni Krishnan', 'Thrissur', '7510748139', 'Sprechen', 'amalkrishnaamal4050k@gmail.com'),
+    ('Asha Antony', 'Ernakulam', '9349912428', 'sprechen', 'ashaantony650@gmail.com')
    ]
 
 
