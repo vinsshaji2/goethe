@@ -25,7 +25,7 @@ email_accounts = [
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'bijichacko722018@gmail.com', 'password': 'hkym jbyg hrtx ucnm', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'hareeshprasad34679@gmail.com', 'password': 'gdfu kjtx lkrs gkte', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'mnair0925@gmail.com', 'password': 'zwhw dktl ookb efkq', 'to': to, 'subject': Subject},
-    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sonasabu931@gmail.com', 'password': 'forz wyjo ssuz vjae', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'sonasabu931@gmail.com', 'password': 'hhge vvyn gyyh ldch', 'to': to, 'subject': Subject},
 ]
 
 # Example dynamic data
