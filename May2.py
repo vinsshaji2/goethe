@@ -9,7 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 to = 'exams.deutschzeit@gmail.com'
 Subject = "Testmail"
 # to = 'EXAMS.REGISTRATION@GOETHE-ZENTRUM.ORG'
-# Subject = "APRIL 2026 B2 EXAM REGISTRATION-GOETHE-ZENTRUM"
+# Subject = "MAY 2026 B2 EXAM REGISTRATION-GOETHE-ZENTRUM"
 
 email_accounts = [
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'vaaswin735@gmail.com', 'password': 'uvjb xfea hist oicg', 'to': to, 'subject': Subject},
@@ -21,6 +21,7 @@ email_accounts = [
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'shruthyvmartin@gmail.com', 'password': 'gqhy gjhp phnj csyy', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'xaviersaniya5@gmail.com', 'password': 'dvzc nmlu etmc nase', 'to': to, 'subject': Subject},
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'anandhuayyappan62@gmail.com', 'password': 'soto eckl iiod ndfs', 'to': to, 'subject': Subject},
+    {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'alnasibi571@gmail.com', 'password': 'uauv dyof zkxc ebzg', 'to': to, 'subject': Subject},
 
 ]
 
@@ -34,6 +35,7 @@ data_list = [
     ('Shruthy Veluthamannumkal Martin', 'Alappuzha', '9605175576', 'Lesen, Hören, Schreiben, Sprechen', 'shruthyvmartin@gmail.com'),
     ('Saniya Xavier Xavier Alphonsa', 'Thiruvananthapuram', '8848478137', 'Hören,Schreiben', 'xaviersaniya5@gmail.com'),
     ('Anandhu Ayyappan', 'Ernakulam', '6282692768', 'Schreiben', 'anandhuayyappan62@gmail.com'),
+    ('Alna Sibi', 'Ernakulam', '7907298515', 'Schreiben, Sprechen,', 'alnasibi571@gmail.com')
 
 
 ]
@@ -112,7 +114,7 @@ def send_all_emails():
 
 
 if __name__ == "__main__":
-    schedule_time = "20:22:10"
+    schedule_time = "23:23:10"
     print(f"⏰ Scheduled to send emails at {schedule_time} to:- {to} and Subject:- {Subject}\n")
 
     while True:

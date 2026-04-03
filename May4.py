@@ -9,7 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 to = 'exams.deutschzeit@gmail.com'
 Subject = "Testmail"
 # to = 'EXAMS.REGISTRATION@GOETHE-ZENTRUM.ORG'
-# Subject = "APRIL 2026 B2 EXAM REGISTRATION-GOETHE-ZENTRUM"
+# Subject = "MAY 2026 B2 EXAM REGISTRATION-GOETHE-ZENTRUM"
 
 email_accounts = [
     {'smtp_server': 'smtp.gmail.com', 'port': 587, 'username': 'athirababuthekkenathu@gmail.com', 'password': 'gaav putb gxty coay', 'to': to, 'subject': Subject},
