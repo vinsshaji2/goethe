@@ -28,7 +28,7 @@ data_list = [
     ('Vishnu Vijayan', 'Ernakulam', '8848992156', 'Schreiben, Sprechen', 'kvv77720@gmail.com'),
     ('Sanusha Sanil', 'Pathanamthitta', '8089057148', 'Hören, Schreiben', 'sanilsanusha105@gmail.com'),
     ('Aleena Jacob', 'Ernakulam', '7025421591', 'Schreiben', 'aleenajacob492@gmail.com'),
-    ('Anna mol At', 'Alappuzha', '9645747862', 'Lesen', 'annamolthomas2255@gmail.com'),
+    ('ANNAMOL AT', 'Alappuzha', '9645747862', 'Lesen', 'annamolthomas2255@gmail.com'),
 ]
 
 
